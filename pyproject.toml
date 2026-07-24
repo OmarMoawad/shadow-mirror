@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shadow-mirror"
+version = "0.2.0"
+description = "A consent-based, self-owned, probabilistic self-reflection engine (not a classifier)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Omar" }]
+keywords = ["metacognition", "self-reflection", "bayesian", "journaling"]
+dependencies = []  # standard library only, on purpose: local-first, auditable.
+
+[project.scripts]
+shadow = "shadow_mirror.cli:main"
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools]
+packages = ["shadow_mirror"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
