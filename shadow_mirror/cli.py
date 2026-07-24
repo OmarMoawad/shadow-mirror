@@ -9,6 +9,11 @@ Commands:
   shadow export PATH                     write a full copy of your data
   shadow forget                          irreversibly delete everything
 
+  shadow subject consent SUBJECT         informed, per-stream consent flow (run it WITH them)
+  shadow subject encounter SUBJECT COND  record one consent-gated encounter
+  shadow subject patterns SUBJECT        first-reaction / counter-pattern questions
+  shadow subject records|revoke|forget|list   inspect / withdraw / erase / list subjects
+
 AXIS   : knowledge | desire
 SIGNAL : self_report | task_performance | implicit_task | behavior |
          physiological | avoidance
@@ -27,6 +32,11 @@ from pathlib import Path
 from .models import Axis, SignalType
 from .reflect import reflective_prompts
 from .store import CONSENT_TEXT, DEFAULT_PATH, Store
+from .consent import (
+    ConsentError, ConsentGrant, DATA_STREAMS, INFERENCE_DOMAINS,
+    NON_OBVIOUS_STREAMS, disclosure_text,
+)
+from .study import Study
 
 _AXES = ("knowledge", "desire")
 _SIGNALS = ("self_report", "task_performance", "implicit_task", "behavior",
@@ -146,6 +156,171 @@ def cmd_forget(args: argparse.Namespace, store: Store) -> int:
     return 1
 
 
+# ---------------------------------------------------------------------------
+# Consented-subject study: getting to know another person, but only with their
+# informed, granular, revocable consent. Every stream is granted on its own; the
+# ones a person cannot notice about themselves must be acknowledged individually.
+# ---------------------------------------------------------------------------
+def cmd_subject_consent(args: argparse.Namespace, store: Store) -> int:
+    subject = args.subject
+    print(f"\nConsent flow for subject: {subject}\n" + "-" * 40)
+    print("This records another person's informed, revocable agreement to be")
+    print("studied. Run it WITH them, reading it TO them. Never fill it in for")
+    print("someone who is not present and agreeing.\n")
+
+    purpose = input("State the purpose you are both agreeing to: ").strip()
+    if not purpose:
+        print("No purpose given. A purpose-less grant is not informed. Aborted.")
+        return 1
+
+    grant = ConsentGrant(subject_id=subject, purpose=purpose)
+    grant.domains = set(INFERENCE_DOMAINS)
+
+    print("\nNow, each data stream. Say yes only to what they agree to.\n")
+    for key, stream in DATA_STREAMS.items():
+        print(f"* {stream.label}")
+        print(f"    captures:   {stream.captures}")
+        print(f"    may reveal: {stream.may_reveal}")
+        if not stream.self_noticeable:
+            print("    NOTE: this is something they may NOT notice about themselves.")
+            print("          It needs its own explicit, separate agreement.")
+            reply = input(f"    Do they explicitly agree to '{key}'? "
+                          "Type 'I agree' verbatim: ").strip().lower()
+            ok = reply == "i agree"
+            if ok:
+                grant.add_stream(key, acknowledged_non_obvious=True)
+                grant.disclosures.append(f"{key}: {stream.captures}")
+        else:
+            reply = input(f"    Agree to '{key}'? [y/N]: ").strip().lower()
+            ok = reply in ("y", "yes")
+            if ok:
+                grant.add_stream(key)
+                grant.disclosures.append(f"{key}: {stream.captures}")
+        print(f"    -> {'GRANTED' if ok else 'declined'}\n")
+
+    if not grant.streams:
+        print("No streams granted. Nothing to study, nothing stored.")
+        return 1
+
+    # Final confirmation: show them exactly what they agreed to.
+    print(disclosure_text(grant.streams, grant.domains, grant.purpose))
+    final = input("\nDoes the subject confirm ALL of the above? Type 'I agree': ").strip().lower()
+    if final != "i agree":
+        print("Not confirmed. Nothing stored.")
+        return 1
+
+    store.save_study(Study(grant))
+    print(f"\nConsent recorded for {subject}: {len(grant.streams)} stream(s), "
+          f"review in {grant.review_days} days. They can revoke anytime.")
+    return 0
+
+
+def cmd_subject_encounter(args: argparse.Namespace, store: Store) -> int:
+    study = store.load_study(args.subject)
+    if study is None:
+        print(f"No consent on file for {args.subject!r}. Run: "
+              f"shadow subject consent {args.subject}", file=sys.stderr)
+        return 1
+    for name, val in (("valence", args.valence), ("arousal", args.arousal),
+                      ("action", args.action), ("reliability", args.reliability)):
+        if not (0.0 <= val <= 1.0):
+            print(f"--{name} must be in [0, 1].", file=sys.stderr)
+            return 2
+    try:
+        study.observe(
+            condition=args.condition, valence=args.valence, action=args.action,
+            arousal=args.arousal, stream=args.stream, context=args.context or "",
+            reliability=args.reliability,
+        )
+    except ConsentError as exc:
+        print(f"Refused: {exc}", file=sys.stderr)
+        return 3
+    store.save_study(study)
+    n = len(study.records(args.condition))
+    print(f"Recorded encounter for {args.subject} / '{args.condition}' "
+          f"(stream={args.stream}). {n} for this condition so far.")
+    return 0
+
+
+def cmd_subject_patterns(args: argparse.Namespace, store: Store) -> int:
+    study = store.load_study(args.subject)
+    if study is None:
+        print(f"No consent on file for {args.subject!r}.", file=sys.stderr)
+        return 1
+    if not study.grant.active:
+        print(f"Consent for {args.subject!r} is not active (revoked or lapsed). "
+              "No analysis.", file=sys.stderr)
+        return 1
+    conditions = [args.condition] if args.condition else study.conditions()
+    if not conditions:
+        print("No encounters recorded yet.")
+        return 0
+    if args.json:
+        out = {c: study.patterns(c).to_dict() for c in conditions}
+        print(json.dumps(out, indent=2))
+        return 0
+    for c in conditions:
+        reading = study.patterns(c)
+        print(f"\n'{c}'  (n={reading.n_encounters}, uncertainty={reading.uncertainty}, "
+              f"counter_pattern={reading.counter_pattern}"
+              + (f", driver={reading.driver}" if reading.counter_pattern else "")
+              + "):\n")
+        for q in reading.questions:
+            print("  - " + q)
+    print()
+    return 0
+
+
+def cmd_subject_records(args: argparse.Namespace, store: Store) -> int:
+    study = store.load_study(args.subject)
+    if study is None:
+        print(f"No consent on file for {args.subject!r}.", file=sys.stderr)
+        return 1
+    recs = study.records(args.condition)
+    if not recs:
+        print("No encounters recorded.")
+        return 0
+    for e in recs:
+        ts = e.timestamp[:19].replace("T", " ")
+        ctx = f"  ({e.context})" if e.context else ""
+        print(f"{ts}  {e.condition:20s} v={e.valence:.2f} a={e.arousal:.2f} "
+              f"act={e.action:.2f}  [{e.stream}]{ctx}")
+    return 0
+
+
+def cmd_subject_revoke(args: argparse.Namespace, store: Store) -> int:
+    study = store.load_study(args.subject)
+    if study is None:
+        print(f"No consent on file for {args.subject!r}.", file=sys.stderr)
+        return 1
+    study.revoke(wipe=True)
+    store.save_study(study)
+    print(f"Consent for {args.subject} revoked and their encounter data wiped.")
+    return 0
+
+
+def cmd_subject_forget(args: argparse.Namespace, store: Store) -> int:
+    if store.forget_subject(args.subject):
+        print(f"Subject {args.subject} erased entirely.")
+        return 0
+    print(f"No such subject: {args.subject}")
+    return 1
+
+
+def cmd_subject_list(args: argparse.Namespace, store: Store) -> int:
+    subs = store.list_subjects()
+    if not subs:
+        print("No consented subjects on file.")
+        return 0
+    for s in subs:
+        study = store.load_study(s)
+        g = study.grant
+        state = "active" if g.active else ("revoked" if g.revoked else "lapsed")
+        print(f"{s:20s}  {state:8s}  streams={len(g.streams)}  "
+              f"encounters={len(study.encounters)}  purpose={g.purpose!r}")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="shadow", description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -182,6 +357,49 @@ def build_parser() -> argparse.ArgumentParser:
     ep.set_defaults(func=cmd_export)
 
     sub.add_parser("forget", help="irreversibly delete everything").set_defaults(func=cmd_forget)
+
+    # -- consented-subject study ------------------------------------------
+    sp = sub.add_parser("subject", help="study a consenting other person")
+    ssub = sp.add_subparsers(dest="subject_command", required=True)
+
+    scp = ssub.add_parser("consent", help="run the informed-consent flow with a subject")
+    scp.add_argument("subject", help="an identifier for the consenting person")
+    scp.set_defaults(func=cmd_subject_consent)
+
+    sep = ssub.add_parser("encounter", help="record one dated encounter (consent-gated)")
+    sep.add_argument("subject")
+    sep.add_argument("condition", help="the recurring condition, e.g. 'public disagreement'")
+    sep.add_argument("--valence", type=float, required=True,
+                     help="emotion valence 0..1 (0=very negative, 1=very positive)")
+    sep.add_argument("--action", type=float, required=True,
+                     help="behaviour 0..1 (0=full withdrawal, 1=full approach)")
+    sep.add_argument("--arousal", type=float, default=0.5, help="arousal 0..1")
+    sep.add_argument("--stream", choices=tuple(DATA_STREAMS), default="self_report",
+                     help="which consented data stream this came from")
+    sep.add_argument("-c", "--context", default="", help="free-text context")
+    sep.add_argument("-r", "--reliability", type=float, default=1.0)
+    sep.set_defaults(func=cmd_subject_encounter)
+
+    spp = ssub.add_parser("patterns", help="first-reaction / counter-pattern reading")
+    spp.add_argument("subject")
+    spp.add_argument("-c", "--condition", default=None, help="scope to one condition")
+    spp.add_argument("--json", action="store_true", help="emit raw JSON instead of questions")
+    spp.set_defaults(func=cmd_subject_patterns)
+
+    srp = ssub.add_parser("records", help="show encounters held about a subject")
+    srp.add_argument("subject")
+    srp.add_argument("-c", "--condition", default=None)
+    srp.set_defaults(func=cmd_subject_records)
+
+    svp = ssub.add_parser("revoke", help="revoke consent and wipe the subject's data")
+    svp.add_argument("subject")
+    svp.set_defaults(func=cmd_subject_revoke)
+
+    sfp = ssub.add_parser("forget", help="erase a subject entirely")
+    sfp.add_argument("subject")
+    sfp.set_defaults(func=cmd_subject_forget)
+
+    ssub.add_parser("list", help="list consented subjects").set_defaults(func=cmd_subject_list)
     return p
 
 

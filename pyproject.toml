@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "shadow-mirror"
-version = "0.2.0"
-description = "A consent-based, self-owned, probabilistic self-reflection engine (not a classifier)."
+version = "0.3.0"
+description = "A consent-based probabilistic reflection engine (self + consented-subject modes; not a classifier)."
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }

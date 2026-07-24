@@ -19,8 +19,19 @@ from .models import Observation, BeliefState, Axis, SignalType
 from .engine import ShadowMirror
 from .safety import SafetyReport
 from .reflect import reflective_prompts
+from .consent import (
+    ConsentGrant,
+    ConsentError,
+    DATA_STREAMS,
+    NON_OBVIOUS_STREAMS,
+    INFERENCE_DOMAINS,
+    disclosure_text,
+)
+from .patterns import Encounter, PatternReading, analyze, reaction_state
+from .study import Study
 
 __all__ = [
+    # self-owned mirror
     "ShadowMirror",
     "Observation",
     "BeliefState",
@@ -28,6 +39,18 @@ __all__ = [
     "Axis",
     "SignalType",
     "reflective_prompts",
+    # consented-subject study
+    "ConsentGrant",
+    "ConsentError",
+    "DATA_STREAMS",
+    "NON_OBVIOUS_STREAMS",
+    "INFERENCE_DOMAINS",
+    "disclosure_text",
+    "Study",
+    "Encounter",
+    "PatternReading",
+    "analyze",
+    "reaction_state",
 ]
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"

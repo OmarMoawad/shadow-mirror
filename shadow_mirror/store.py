@@ -16,6 +16,7 @@ from typing import Optional
 
 from .engine import ShadowMirror
 from .models import Observation
+from .study import Study
 
 DEFAULT_PATH = Path.home() / ".shadow_mirror" / "journal.json"
 
@@ -64,6 +65,36 @@ class Store:
         data["observations"] = [o.to_dict() for o in mirror.observations]
         data["updated_at"] = _now_iso()
         self._write_raw(data)
+
+    # -- consented-subject studies -----------------------------------------
+    # Studies of *other* consenting people live in a separate section, keyed by
+    # subject id. They never mix with the self journal above. A study is only
+    # ever written after its consent grant exists (the CLI/Study layer enforces
+    # that consent covers each stream before any datum is created).
+    def save_study(self, study: Study) -> None:
+        data = self._read_raw()
+        subjects = data.setdefault("subjects", {})
+        subjects[study.grant.subject_id] = study.to_dict()
+        data["updated_at"] = _now_iso()
+        self._write_raw(data)
+
+    def load_study(self, subject_id: str) -> Optional[Study]:
+        raw = self._read_raw().get("subjects", {}).get(subject_id)
+        return Study.from_dict(raw) if raw else None
+
+    def list_subjects(self) -> list:
+        return sorted(self._read_raw().get("subjects", {}).keys())
+
+    def forget_subject(self, subject_id: str) -> bool:
+        """Erase one subject entirely. The subject's right to be forgotten."""
+        data = self._read_raw()
+        subjects = data.get("subjects", {})
+        if subject_id in subjects:
+            del subjects[subject_id]
+            data["updated_at"] = _now_iso()
+            self._write_raw(data)
+            return True
+        return False
 
     def export(self, dest: Path) -> Path:
         dest = Path(dest)
