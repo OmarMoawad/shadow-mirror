@@ -1285,6 +1285,16 @@ it. They are marked † in the reference list above. This is not a claim that an
 ground rule 6 they are unconfirmed.
 **Action:** verify the six and update `counts`, or mark them explicitly as pending.
 
+**OW-10 · Two release decisions the repository now forces.**
+Neither is a research defect; both follow from the archive having been committed. First, the full
+working conversation transcript is in the repository under `archive/`. The repository is private, so
+this is storage rather than publication — but the data-availability statement above promises a *public*
+repository, and the transcript would go public with it. Second, the v1.3.0 archive currently sits on a
+branch rather than on `main`, so a repository URL quoted today would resolve to the superseded v0.3.0
+package.
+**Action:** decide deliberately whether the transcript is published, moved to a controlled deposit, or
+replaced by a code-only mirror; and merge the branch before quoting a URL.
+
 ### B.3 Ordinary unfinished work
 
 Excluded from B.1 on purpose: none of it is blocked on anything external, and listing it there would

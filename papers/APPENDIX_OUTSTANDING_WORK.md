@@ -222,6 +222,28 @@ its coverage, and that under ground rule 6 the nine are unconfirmed until someon
 Session-15 additions pending verification. `papers/make_bibliography.py` emits every entry with a
 `keywords = {verified}` flag so the distinction survives into the `.bib`.
 
+### OW-10 · Two release decisions the repository now forces
+
+Neither is a research defect. Both are consequences of the archive having been committed, and both
+need a decision before anything is made public.
+
+**The conversation transcript is in the repository.** `archive/CONVERSATION.md` and
+`archive/TARIK_MESSAGES.md` hold the full working transcript — roughly 150,000 characters of
+human-authored text, including the original brief. The repository is currently **private**, so this is
+storage rather than publication. It stops being true the moment the repository is made public, or a
+zip of it is attached to a preprint or an artifact submission. The data-availability statements in both
+papers promise a public repository.
+**Action.** Decide before publishing: keep the transcript in a private repository and publish a code-
+only mirror, move it behind a separate access-controlled deposit, or publish it deliberately as a
+provenance record. Publishing it by omission is the one option to avoid.
+
+**The v1.3.0 archive sits on a branch, not on `main`.** It was pushed to
+`shadow-mirror-v1.3.0-archive` rather than merged, so `main` still carries v0.3.0 — 34 tests, none of
+the papers, and none of the modules the drafts describe. Any repository URL quoted in a submission
+would currently resolve to the old package.
+**Action.** Review and merge, then confirm that the URL in the availability statements points at the
+merged state.
+
 ---
 
 ## 4. Ordinary unfinished work
@@ -253,6 +275,8 @@ Nothing here is blocked on anything external. It is simply not done.
 | Venue selection for the ethics paper — AIES or FAccT | **You.** Check current calls; dates move annually |
 | **OW-6** — recover or regenerate the benchmark scripts | Whoever holds the working environment that produced `results.json` |
 | **OW-7** — propagate corrections into P1 and P2, or withdraw them | **You**, editorially |
+| **OW-10** — decide whether the conversation transcript ships publicly | **You.** Decide before the repository is made public, not after |
+| **OW-10** — merge `shadow-mirror-v1.3.0-archive` into `main` | **You.** Until then a quoted repository URL resolves to v0.3.0 |
 | Three dataset downloads for the secondary-analysis route | Mechanical. Two are small — 35 MB and 16 MB |
 | Urban Appraisal rating polarity | From the BeMoBIL analysis code. The loader refuses until supplied |
 | Two instrument permissions — Claremont Purpose Scale, MEPSI | Letters to the instrument authors. Two of the original four are no longer needed |
