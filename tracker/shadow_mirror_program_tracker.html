@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shadow Mirror — Research Program Tracker</title>
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel-2:#1d2129; --line:#2a2f3a;
+    --ink:#e7e9ee; --ink-dim:#9aa3b2; --ink-faint:#6b7382;
+    --crit:#e5484d; --high:#f2994a; --med:#e2c541;
+    --low:#6b7382; --ok:#3fb950; --accent:#6e9fff;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f7f8fa; --panel:#ffffff; --panel-2:#f2f4f7; --line:#e2e6ec;
+           --ink:#1a1d23; --ink-dim:#5a6472; --ink-faint:#8b94a3; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:15px/1.55 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:1080px;margin:0 auto;padding:40px 22px 80px}
+  header{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:30px}
+  h1{font-size:26px;margin:0 0 6px;letter-spacing:-.01em}
+  .sub{color:var(--ink-dim);font-size:14px}
+  h2{font-size:17px;margin:36px 0 14px;letter-spacing:-.005em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:22px 0}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .stat .n{font-size:24px;font-weight:600;letter-spacing:-.02em}
+  .stat .l{font-size:12px;color:var(--ink-dim);margin-top:2px;text-transform:uppercase;letter-spacing:.06em}
+  .bar{height:8px;background:var(--panel-2);border-radius:99px;overflow:hidden;margin:14px 0 4px;border:1px solid var(--line)}
+  .bar>i{display:block;height:100%;background:var(--accent)}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-faint);font-weight:600}
+  tr:last-child td{border-bottom:none}
+  .chip{display:inline-block;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600;
+        letter-spacing:.03em;white-space:nowrap}
+  .c-crit{background:rgba(229,72,77,.15);color:var(--crit);border:1px solid rgba(229,72,77,.35)}
+  .c-high{background:rgba(242,153,74,.15);color:var(--high);border:1px solid rgba(242,153,74,.35)}
+  .c-med{background:rgba(226,197,65,.14);color:var(--med);border:1px solid rgba(226,197,65,.32)}
+  .c-low{background:rgba(107,115,130,.16);color:var(--ink-dim);border:1px solid var(--line)}
+  .c-done{background:rgba(63,185,80,.15);color:var(--ok);border:1px solid rgba(63,185,80,.35)}
+  .c-todo{background:transparent;color:var(--ink-faint);border:1px solid var(--line)}
+  .phase{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 16px 8px;margin-bottom:14px}
+  .phase h3{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-dim);margin:14px 0 4px}
+  .q{background:var(--panel-2);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:12px 16px;margin:10px 0}
+  .q b{display:block;margin-bottom:3px}
+  .q span{color:var(--ink-dim);font-size:13px}
+  code{background:var(--panel-2);padding:1px 5px;border-radius:4px;font-size:12.5px}
+  footer{margin-top:50px;padding-top:18px;border-top:1px solid var(--line);color:var(--ink-faint);font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Shadow Mirror — Research Program Tracker</h1>
+  <div class="sub">Reflective Artificial Intelligence · Tarik Metin · started 25 July 2026 · <b>Sessions 1–13 complete</b> · paused at the decision point · author of record: Omar Moawad</div>
+</header>
+
+<div class="grid">
+  <div class="stat"><div class="n">4</div><div class="l">Open defects</div></div>
+  <div class="stat"><div class="n" style="color:var(--crit)">3</div><div class="l">Critical open</div></div>
+  <div class="stat"><div class="n" style="color:var(--ok)">19</div><div class="l">Resolved</div></div>
+  <div class="stat"><div class="n" style="color:var(--ok)">11 / 11</div><div class="l">Invariants executable</div></div>
+  <div class="stat"><div class="n">707</div><div class="l">Tests passing</div></div>
+  <div class="stat"><div class="n" style="color:var(--crit)">59.9%</div><div class="l">Mutation score</div></div>
+</div>
+
+<div class="bar"><i style="width:100%"></i></div>
+<div class="sub">Program progress — 18 of 18 sessions complete · v1.3.0 · awaiting three downloads and your details</div>
+
+<h2>Session 18 — the Route A pipeline and the IRB packet</h2>
+<table>
+  <tr><td><span class="chip c-done">LOADERS</span></td>
+      <td><b>Written against schemas read from the actual archives</b>, not from the papers — because
+      all three corpora contradict their own documentation. FOODEEG's sidecar states a trial count
+      wrong for 116 of 117 subjects; Urban Appraisal's README and metadata disagree on the licence;
+      BIRAFFE2's paper prints a column name its files spell differently. <b>The files are the
+      authority</b>, and a schema mismatch raises rather than warns.</td></tr>
+  <tr><td><span class="chip c-crit">POLARITY</span></td>
+      <td><b>Urban Appraisal never documents which end of its rating scales is which.</b> Nothing
+      states whether 1 means "happy" or "unhappy" for valence. A wrong guess <b>does not fail — it
+      inverts the conclusion and looks fine</b>. The loader raises <code>PolarityUnknown</code> until
+      a polarity is passed in explicitly, and records what was assumed.</td></tr>
+  <tr><td><span class="chip c-done">TRAPS</span></td>
+      <td><b>Nine documented file quirks handled, each with a test.</b> BIRAFFE2 is semicolon-delimited
+      (a comma read gives one column, silently); FOODEEG Session 1 uses Windows path separators and
+      Session 2 POSIX for the same images; every FOODEEG <code>.tsv</code> has a byte-identical
+      <code>.csv</code> twin that doubles a naive glob; Urban Appraisal's beauty scale contains a raw
+      <code>0x1A</code> byte and its sidecar spells it differently again.</td></tr>
+  <tr><td><span class="chip c-done">NO DATA</span></td>
+      <td><b>Every analysis returns a structured "no data" record rather than a plausible number.</b>
+      Nothing in the module can produce a figure without the archives present, and a test asserts it.
+      The contradiction result carries its own disclaimer: it is <i>not</i> evidence of hidden
+      preference and <i>not</i> evidence of compliance — no public corpus can separate those.</td></tr>
+  <tr><td><span class="chip c-high">IRB</span></td>
+      <td><b>Full packet drafted, with three findings that change the sequence.</b> Expect <b>full board
+      review, not expedited</b> — AUC's expedited category excludes studies with manipulation or
+      stress. The <b>PDPL licence and CAPMAS permit are separate tracks that must start before the
+      IRB</b>. And pseudonymised data stays personal data under PDPL, so <b>only key destruction</b>
+      takes the dataset out of scope. Includes a second consent at debriefing and a pre-committed
+      statement that a null result will be reported as prominently as a positive one.</td></tr>
+</table>
+
+<h2>Session 17 — the workaround hunt</h2>
+<p class="sub" style="margin:-6px 0 14px">Rule applied: nothing gets listed as pending until a search for a substitute comes back empty.
+<b>Eleven candidates in. Six dissolved. Five survived.</b></p>
+<table>
+  <tr><td><span class="chip c-done">VALUES</span></td>
+      <td><b>PVQ-RR unblocked by substitution.</b> The <b>ESS Human Values Scale</b> publishes its items
+      <i>and</i> the item-to-value mapping the 403 was hiding, is CC BY-SA as documentation and also
+      carries Schwartz's own grant via GESIS — and has an <b>Arabic version already fielded</b>. Cost:
+      10 basic values instead of 19 refined.</td></tr>
+  <tr><td><span class="chip c-done">WISDOM</span></td>
+      <td><b>3D-WS unblocked by substitution.</b> The <b>revised ASTI</b> is CC BY 4.0 with Levenson —
+      author of the original — as a co-licensor. Five dimensions, authors reject a total. Construct
+      drift declared: it measures self-transcendence and has no analogue of Ardelt's cognitive
+      dimension. <i>Trap avoided:</i> the Brief Wisdom Screening Scale looked easier but contains
+      Ardelt's own items, so it walks back into the same gate.</td></tr>
+  <tr><td><span class="chip c-crit">59.9%</span></td>
+      <td><b>"Coverage is unmeasured" is now a number.</b> 5,114 mutants — <b>2,319 killed, 1,549
+      survived</b>, 1,244 with no covering test. Reported rather than tuned: a paper arguing for
+      checkable claims should publish the check that came back middling.</td></tr>
+  <tr><td><span class="chip c-high">FOUND</span></td>
+      <td><b>The mutation run found a gap in the checking apparatus itself.</b> Mutating an invariant's
+      identifier from <code>"I"</code> to nonsense <b>survived</b>, as did nulling its name. Nothing
+      asserted that a check reports the invariant it claims to be — a catalogue of eleven named
+      properties that could be silently renamed. Two tests close it. Fourth time a property has been
+      found by measurement rather than intent.</td></tr>
+  <tr><td><span class="chip c-med">5 LEFT</span></td>
+      <td><b>What has no substitute:</b> the threat-confound claim needs primary collection; no
+      instrument is validated in Egypt; MEPSI and CPS have no free replacement; <b>none of TiiS, FAccT
+      or AIES runs an artifact track</b>; and Invariant X plus the question generator remain syntactic
+      proxies with no known decision procedure. Now Appendix C (P1) and Appendix B (P2), each beside a
+      table of what the search <i>did</i> resolve.</td></tr>
+</table>
+
+<h2>Session 16 — papers reconciled to eleven invariants</h2>
+<table>
+  <tr><td><span class="chip c-high">D-34</span></td>
+      <td><b>The negative-test count was wrong, in our favour.</b> Both papers said "16 negative
+      tests". Four of those sixteen are <b>positive controls</b> — states that should pass and do. The
+      true figure was 12 negative + 4 controls, now <b>14 + 4</b> with Invariant XI. Corrected in the
+      text explicitly rather than silently, because a paper about checkable claims should not miscount
+      its own checks.</td></tr>
+  <tr><td><span class="chip c-done">§3.7</span></td>
+      <td><b>New P1 section — "An invariant that exists because of a request".</b> XI was not derived
+      from the architecture; it was derived from being asked for something. The section reports the
+      five-way split, why stage instruments cannot be de-ranked, and why the refusing methods
+      <b>exist in order to refuse</b> — a deliberate inversion of the advice to delete dead code.</td></tr>
+  <tr><td><span class="chip c-done">§4.4</span></td>
+      <td><b>New P2 section — "A request the architecture declines".</b> The safety result of §6.1
+      measures a refusal we designed against a confound we simulated. This one was demanded by a real
+      person and declined four-fifths, with grounds a reader can check by running the code.</td></tr>
+  <tr><td><span class="chip c-done">HARNESS</span></td>
+      <td><b>XI got its own generator.</b> 200 randomised formation models plus 100 further property
+      checks, built from random declarations, overrides and <i>attempted</i> administrations — most of
+      which refuse. XI must hold on those paths too. Without it, XI would have been the one invariant
+      asserted only by hand-built cases, which is where the other ten started.
+      <b>673 tests collected, 671 passing.</b></td></tr>
+  <tr><td><span class="chip c-med">LETTERS</span></td>
+      <td><b>Four permission emails drafted</b> — Bronk (CPS), Ardelt (3D-WS), Darling-Fisher (MEPSI),
+      Schwartz (PVQ-RR mapping, which returned HTTP 403). Two placeholders to fill: your email, and a
+      department if you have one.</td></tr>
+</table>
+
+<h2>Session 15 — the formation model, and what it declines to say</h2>
+<table>
+  <tr><td><span class="chip c-crit">RANK</span></td>
+      <td><b>Stage instruments cannot be de-ranked.</b> Loevinger's TPR, Kegan's subject-object
+      position, Cook-Greuter's "Center of Gravity" — the single ordered position <b>is</b> the
+      construct, not a summary of it. Reporting a profile from one would misrepresent it. Construct
+      <b>dropped</b>, replaced by <b>3D-WS</b> and <b>MEPSI</b>, which never claimed a stage.</td></tr>
+  <tr><td><span class="chip c-done">XI</span></td>
+      <td><b>New invariant — declared-only personhood.</b> Nothing about a person exists unless they
+      declared it or self-completed the instrument. The decision procedure <b>calls</b> each refusing
+      method and requires the matching ground. Two negative tests: return a value &rarr; fails; delete
+      the method &rarr; also fails, because <b>absence is not refusal</b>.</td></tr>
+  <tr><td><span class="chip c-high">LICENCE</span></td>
+      <td><b>An unconfirmed licence is a refusal, not a warning.</b> Only <b>MLQ</b> and <b>BPNSFS</b>
+      carry quoted published permission. CPS, 3D-WS, MEPSI and PVQ-RR are author-held with no
+      permission statement located — administering one on an assumption exposes a real researcher.
+      <b>No item text is bundled with the software.</b></td></tr>
+  <tr><td><span class="chip c-done">FOUND</span></td>
+      <td><b>Retroactive consent was already refused, and nobody designed it.</b> A session
+      timestamped before the consent grant is rejected, because the ledger answers <i>what was under
+      grant at that instant</i>. Found by a failing test. Third time a property has emerged from
+      measurement rather than intent.</td></tr>
+  <tr><td><span class="chip c-med">EGYPT</span></td>
+      <td><b>Not one instrument has been validated in Egypt.</b> The Arabic evidence is Lebanese,
+      Omani, Saudi, Palestinian, Qatari, Jordanian. A registry test asserts no instrument claims
+      Egypt, so this cannot be quietly relaxed. And the Arabic MLQ is an <b>8-item variant</b> — a
+      different instrument, registered separately or not at all.</td></tr>
+</table>
+
+<h2>Session 14 — related work, affiliation, and the Phase IV data question</h2>
+<table>
+  <tr><td><span class="chip c-done">REFS</span></td>
+      <td><b>76 candidate references verified against live sources. 76 confirmed, 0 rejected, 0
+      fabricated.</b> P1: 12 &rarr; <b>55</b>. P2: 14 &rarr; <b>50</b>. Citation integrity
+      machine-checked on both papers — 0 dangling, 0 orphaned, 0 without a resolvable identifier.
+      Six errors caught during verification, including a title that was wrong on two counts and a
+      missing fourth author.</td></tr>
+  <tr><td><span class="chip c-crit">FAWN</span></td>
+      <td><b>The word "fawn" is not from the peer-reviewed literature.</b> It traces to Walker (2013),
+      a self-published trade book. Removed from every load-bearing claim in P2 and replaced with cited
+      peer-reviewed constructs — appeasement under traumatic entrapment (Cantor &amp; Price 2007),
+      tonic immobility (Marx et al. 2008), the acute stress spectrum (Bracha 2004). The
+      <code>[CITATION NEEDED]</code> marker is resolved by <b>concession, not by citation</b>.</td></tr>
+  <tr><td><span class="chip c-high">D-33</span></td>
+      <td><b>Ground rule 7 violation, found by re-running the suite.</b> Both drafts said
+      "312 passed"; P1 said a 314-test suite. The shipped package returns <b>324 passed, 2 xfailed</b>.
+      Correct when written, stale after Session 12. Text fixed; the regeneration script that would
+      prevent a recurrence is not yet written.</td></tr>
+  <tr><td><span class="chip c-done">§7.1</span></td>
+      <td><b>New P2 section — a second regulatory regime.</b> Egypt's PDPL 151/2020 contains
+      <b>no scientific-research exemption at all</b>, where GDPR has three; Law 214/2020 does not reach
+      behavioural research. A weaker national human-subjects law can coexist with a stricter
+      data-protection constraint — which the fairness literature, being EU- and US-centred, has not
+      much said.</td></tr>
+  <tr><td><span class="chip c-crit">DATA</span></td>
+      <td><b>~40 datasets assessed. None can validate the threat-confound claim.</b> Good physiology
+      means passive viewing; real choice means no arousal channel. Partial validation is available now
+      on <b>BIRAFFE2</b> (N=102), <b>FOODEEG</b> (N=117) and <b>Urban Appraisal</b> (N=63) — calibration,
+      abstention, order-invariance. The safety result still requires primary collection.</td></tr>
+</table>
+
+<h2>Session 13 — adversarial self-review</h2>
+<table>
+  <tr><td><span class="chip c-high">A-1</span></td>
+      <td><b>"Your simulator is your theory."</b> Answered with a sweep rather than a paragraph. The
+      0.0% holds to <b>~50% channel separation</b>, degrades to 29.7% at 0.25, and every method fails
+      at zero separation — as it must. Partly conceded; the paper is stronger for it.</td></tr>
+  <tr><td><span class="chip c-crit">A-2</span></td>
+      <td><b>A supervised four-channel baseline beats us.</b> Fitted on labelled data it matches 0.0%
+      at high separation and scores <b>5.0% against our 29.7%</b> at separation 0.25. Reported in
+      full. The defence is that it needs ground-truth labels for "was this a threat response" — which
+      do not exist in deployment.</td></tr>
+  <tr><td><span class="chip c-done">A-3</span></td>
+      <td><b>"0.0% [0.0, 0.0] is not an interval."</b> Conceded. Now <b>0 of 800 episodes, 95% upper
+      bound 0.37%</b> by the rule of three — the number a deployment decision should use.</td></tr>
+  <tr><td><span class="chip c-done">A-9</span></td>
+      <td><b>"N=1 implementation; your invariants may be trivially satisfiable."</b> Rebutted: the
+      same procedure run against an independently written prototype <b>passes 4 and fails 3</b>.</td></tr>
+  <tr><td><span class="chip c-med">CONCEDED</span></td>
+      <td>Clinical vocabulary borrowed without validation (<code>[CITATION NEEDED]</code> marker left
+      in place); not lawyers; the guard is two thresholds; Invariant X is a syntactic proxy for a
+      semantic property; harness coverage unmeasured; <b>related work too thin for both venues</b>.</td></tr>
+</table>
+
+<h2>Session 12 — assets and the defect sweep</h2>
+<table>
+  <tr><td><span class="chip c-done">D-32</span></td>
+      <td><b>The Art. 5(1)(f) prohibition now has a mechanism.</b> A deployment context gates the
+      biometric stream; <b>refusal is the default</b> when the context is undeclared; and the safety
+      exception requires a <b>written basis, not a flag</b> — a boolean can be set by accident, a
+      sentence has to be written. Enforcement ratio 5/12 → <b>6/12</b>.</td></tr>
+  <tr><td><span class="chip c-done">D-31</span></td>
+      <td><b>Consent can now be demonstrated.</b> Hash-chained append-only ledger answering "which
+      streams were granted at instant T" (Art. 7(1)), tamper-evident, plus a withdrawal receipt that
+      closes the Art. 7(3) parity gap — granting ended in a summary, withdrawal ended in silence.</td></tr>
+  <tr><td><span class="chip c-done">D-28</span></td>
+      <td><b>Write path 1121 ms → 5.24 ms at 800 pairs</b> — 214×, and linear. Beliefs are computed
+      when the mirror is consulted, which is also what a reactivity counter should have been counting
+      all along.</td></tr>
+  <tr><td><span class="chip c-high">NEAR MISS</span></td>
+      <td><b>The D-26 fix improved the headline by 36 points and destroyed the thin-data case.</b>
+      Soft EM took δ=0.45 with 8 topics from 61.3% to <b>97.0%</b> — and took one topic from 81.2% to
+      <b>20.8%</b>. An identifiability guard now refuses below 3 topics. Recorded because it nearly
+      shipped.</td></tr>
+  <tr><td><span class="chip c-done">FIGURES</span></td>
+      <td>Six publication figures, PDF and PNG, generated from source data. D-17 closed — the literal
+      <code>\n</code> escape sequences are gone.</td></tr>
+</table>
+
+<h2>Session 11 — P1 drafted; both papers now exist</h2>
+<table>
+  <tr><td><span class="chip c-done">DRAFT</span></td>
+      <td><b>"Invariants You Can Run: An Executable Specification for Reflective Human–AI
+      Architectures."</b> ~4,000 words for ACM TiiS. <b>All cited numbers matched automatically</b>
+      against the source outputs — 3 percentages, 22 decimals, zero unmatched.</td></tr>
+  <tr><td><span class="chip c-done">LEAD</span></td>
+      <td>Opens on the honest origin: testing the prototype against <i>its own</i> invariants found
+      Invariant II violated and belief revision order-dependent by <b>95 percentage points</b> — both
+      present in a document that asserted the invariants held. <b>314 tests, 216 of them invariant
+      checks</b> (200 randomised states + 16 negative).</td></tr>
+  <tr><td><span class="chip c-med">§8</span></td>
+      <td><b>The negative result is given a section of its own.</b> The architecture buys no accuracy
+      — parity with a median split across all 20 conditions. That relocates the contribution to
+      structural properties rather than diminishing it, and omitting it would have been the easy
+      move.</td></tr>
+  <tr><td><span class="chip c-done">§3.4</span></td>
+      <td>The Invariant X check <b>failing on its first contact with real output</b> is presented as
+      the argument for the method, not buried. A suite pointed only at fixtures always passes.</td></tr>
+  <tr><td><span class="chip c-low">GAPS</span></td>
+      <td>Causal reflection and knowledge consolidation carried as <b>strict xfails</b>; encryption,
+      multimodal, execution engine and UI listed as unimplemented. A reference architecture earns the
+      word when the distance to its implementation can be enumerated.</td></tr>
+</table>
+
+<h2>Session 10 — P2 drafted in full</h2>
+<table>
+  <tr><td><span class="chip c-done">DRAFT</span></td>
+      <td><b>"Refusal as a Safety Mechanism: Consent-Gated Reflective Inference and the Threat
+      Confound."</b> ~4,300 words, complete through references and ethics statement, targeted at
+      AIES/FAccT. Author: Omar Moawad; affiliation left as a marked placeholder.</td></tr>
+  <tr><td><span class="chip c-done">TRACED</span></td>
+      <td><b>26 distinct percentages cited; 25 matched automatically</b> to <code>results.json</code>
+      and the experiment outputs by script. The 26th is the pre-fix ambivalence rate, traced to the
+      Session 8 run with reproduction instructions. <b>No number was typed by hand.</b></td></tr>
+  <tr><td><span class="chip c-done">LEAD</span></td>
+      <td>Opens on the harm rate — <b>0.0% vs 42.9% and 75.1%</b> — and on the finding that a
+      stated-vs-behaviour reader gets the <i>compliance</i> case wrong <b>85.8%</b> of the time, which
+      is where the damage is worst.</td></tr>
+  <tr><td><span class="chip c-med">HONEST</span></td>
+      <td>Prints the costs: 13 points of sensitivity, 33 points of specificity under ablation, ECE
+      0.221 under severe misspecification, credible sets that do not reach nominal coverage, and a
+      quadratic intake. Two <code>[NO DATA YET]</code> markers where humans would be needed.</td></tr>
+  <tr><td><span class="chip c-done">RATIO</span></td>
+      <td>§8 prints the enforcement ratio — <b>5 of 12 prohibitions machine-enforced</b> — and argues
+      that papers proposing ethical architectures should print it rather than the list.</td></tr>
+</table>
+
+<h2>Session 9 — the regulatory audit</h2>
+<table>
+  <tr><td><span class="chip c-crit">R-1</span></td>
+      <td><b>With the physiological stream on, Shadow Mirror is plausibly an emotion recognition
+      system under the AI Act</b> — because Art. 3(34) biometric data, unlike GDPR's, does
+      <b>not</b> require unique identification. Art. 5(1)(f) <b>prohibits</b> emotion inference in
+      workplaces and education institutions. In force since 2 Feb 2025.</td></tr>
+  <tr><td><span class="chip c-crit">R-2</span></td>
+      <td><b>Educational deployment is high-risk under Annex III(3)(b)</b> — evaluating learning
+      outcomes and steering the learning process. Those obligations apply from <b>2 August 2026:
+      eight days from now.</b></td></tr>
+  <tr><td><span class="chip c-high">CORRECTION</span></td>
+      <td><b>I withdraw my own Session 6 recommendation</b> to pilot in education because it is
+      low-stakes. Under EU law it is a named high-risk and potentially prohibited domain. Literature
+      synthesis becomes the Phase 3 pilot.</td></tr>
+  <tr><td><span class="chip c-done">CONSENT</span></td>
+      <td><b>The consent gate meets five of seven dynamic-consent criteria and exceeds two</b> —
+      non-obvious streams cannot be bundled at all, and every stream discloses what it <i>may
+      reveal</i>, not just what it records. Two gaps: no append-only consent record (Art. 7(1)),
+      no withdrawal receipt.</td></tr>
+  <tr><td><span class="chip c-med">5 / 12</span></td>
+      <td><b>The Prohibited-Use Checklist is now tagged by enforcement.</b> Five prohibitions are
+      enforced in code and tested; seven are policy only. Printing the ratio is more honest than
+      printing the list.</td></tr>
+  <tr><td><span class="chip c-high">THE TENSION</span></td>
+      <td><b>The physiological stream exists only to protect people, provably does, and is exactly
+      what pulls the system into the prohibition.</b> Remove it and the legal exposure goes; remove
+      it and the misreading rate goes 0.0% → 31.2%. That belongs in the paper as a section.</td></tr>
+</table>
+
+<h2>Session 8 — the claim matrix, rebuilt</h2>
+<table>
+  <tr><td><span class="chip c-done">D-29 FIXED</span></td>
+      <td><b>Ambivalence was a residual bucket.</b> Computed from dispersion alone, it read
+      <b>95.5% of pure noise</b> and <b>98.8% of monotonic drift</b> as ambivalence — telling people
+      who had made up their minds that they were conflicted. Gated on lag-1 autocorrelation:
+      precision <b>34.0% → 97.6%</b>, recall unchanged at 100%.</td></tr>
+  <tr><td><span class="chip c-done">0 → 8</span></td>
+      <td><b>Eight claims are now settled by a test or a measurement</b>, where your original matrix
+      had none. Thirteen of its fifteen claims read "architecture only" or "theory only" — an honest
+      self-assessment that is simply out of date.</td></tr>
+  <tr><td><span class="chip c-done">BIGGEST</span></td>
+      <td><b>"Architecture is safer than a baseline"</b> moves from <i>normative proposal</i> to
+      <b>0.0% [0.0, 0.0]</b> vs 42.9% and 75.1%, with a named file and a falsification signal.</td></tr>
+  <tr><td><span class="chip c-med">5 WITHDRAWN</span></td>
+      <td>Four were never yours (the fabricated statistic and baselines). The fifth is: <b>"the URG
+      improves reflective reasoning" is removed as stated</b> — Session 3 measured parity with a
+      median split. The URG's benefits are structural, and the matrix now claims only those.</td></tr>
+  <tr><td><span class="chip c-done">7 → 14</span></td>
+      <td>Conformance concerns implemented and test-backed doubled. Four are recorded as
+      <b>specified but unbuilt</b>, two with strict xfails so they cannot quietly become
+      "implemented" in a later summary.</td></tr>
+</table>
+
+<h2>Session 7 — the mathematical chapters</h2>
+<table>
+  <tr><td><span class="chip c-crit">F-1</span></td>
+      <td><b>Every display equation is missing its equals sign</b> — including Bayes' theorem, in the
+      chapter named for Bayes' theorem: <code>P(H | E) \frac{P(E|H),P(H)}{P(E)}</code>. Systematic
+      conversion damage: <code>=</code>, thin spaces and set braces all stripped. A corrected formal
+      appendix is delivered as a drop-in replacement.</td></tr>
+  <tr><td><span class="chip c-high">F-2</span></td>
+      <td><b>The operator names collide with the state names</b> — four of six. <i>R</i> is both the
+      reflective state and the belief-revision operator, on facing pages.</td></tr>
+  <tr><td><span class="chip c-med">F-5</span></td>
+      <td><b>The belief state is left untyped</b>, yet later chapters assert properties of it. Fixed
+      by stating four axioms — plurality, commutativity, invertibility, audit — now enforced by
+      test.</td></tr>
+  <tr><td><span class="chip c-high">D-27</span></td>
+      <td><b>Measurement caught a quadratic-time defect in my own Session 4 code.</b> The belief
+      ledger summed every contribution on every update: 4.2× per doubling, 624 ms at 8,000 updates.
+      Fixed to 2.0×, 78 ms at 16,000, with a regression test pinning it.</td></tr>
+  <tr><td><span class="chip c-done">MAP</span></td>
+      <td><b>Six of eight operators have named implementations</b> with asserted behaviour. Causal
+      reasoning (pp. 64–66) and knowledge consolidation (p. 145) are <b>prose only</b> — recorded as
+      strict xfails rather than quietly omitted.</td></tr>
+  <tr><td><span class="chip c-low">NOTE</span></td>
+      <td>The monograph warned that unrestricted recompute "could approach O(n²)". The shipped engine
+      has exactly that. <b>The complexity chapter was right</b> — it just needs to say it about the
+      operators it defines.</td></tr>
+</table>
+
+<h2>Session 6 — your bibliography is clean; the gap is recency</h2>
+<table>
+  <tr><td><span class="chip c-done">96 / 96</span></td>
+      <td><b>Zero detectable errors.</b> All 96 entries checked structurally: no missing years, no
+      malformed DOIs, no duplicates, <b>28 distinct publisher prefixes</b>. The six entries without a
+      DOI are books and technical reports, where none exists. Five of five highest-risk entries
+      verified live.</td></tr>
+  <tr><td><span class="chip c-done">CORRECTION</span></td>
+      <td>In Session 1 I said the generated paper "degraded your scholarship." I understated it: its
+      12-entry list had <b>at least six errors</b>; your 96-entry list has <b>zero</b>.</td></tr>
+  <tr><td><span class="chip c-high">THE GAP</span></td>
+      <td><b>Recency, not accuracy.</b> Median year 2012; seven entries from 2022+; <b>none from
+      2025–26</b>. That is the first thing a reviewer will name. Ten already-verified 2024–2026
+      references are queued for insertion.</td></tr>
+  <tr><td><span class="chip c-done">VENUE</span></td>
+      <td><b>Settled.</b> P2 (ethics of design) → <b>AIES / FAccT</b> first — a quantified harm, a
+      design that removes it, no human subjects needed. P1 (architecture) → <b>ACM TiiS</b>.
+      <b>IEEE TAC is ruled out</b> until the human study exists.</td></tr>
+  <tr><td><span class="chip c-low">HONEST</span></td>
+      <td>Structural checks covered all 96; live verification covered 5. The remaining 91 is a
+      mechanical day's work for a co-author — <code>bibliography.json</code> makes it a checklist.</td></tr>
+</table>
+
+<h2>Session 5 — the invariants become a specification</h2>
+<table>
+  <tr><td><span class="chip c-done">10 / 10</span></td>
+      <td><b>All ten invariants are now executable checks</b>, holding over 200 randomised reflective
+      states, each with a negative test proving the check can fail. The paper's claim changes from
+      "we define ten invariants" to "these ten properties are decidable, and here is the procedure" —
+      verifiable by running <code>pytest</code>. 78 → <b>294 tests</b>.</td></tr>
+  <tr><td><span class="chip c-med">SELF-CATCH</span></td>
+      <td><b>The Invariant X check failed on its first contact with real output</b> — it flagged the
+      reactivity caution ("You have consulted this 5 times") as a verdict. The defect was in the
+      check, not the system. A conformance suite pointed only at fixtures always passes and is
+      worthless.</td></tr>
+  <tr><td><span class="chip c-done">D-23 (a)</span></td>
+      <td><b>Credible sets beat point labels at every level of misspecification</b> — 78.2% → 88.0%
+      at δ=0.30 — for +0.45 hypotheses of set size. But a "90%" set contains the truth only 60.5% of
+      the time at δ=0.45: a set inherits its posterior's miscalibration.</td></tr>
+  <tr><td><span class="chip c-done">D-23 (b)</span></td>
+      <td><b>Displacement is recoverable by pooling across topics.</b> At δ=0.30 with 8 topics,
+      accuracy <b>83.8% → 95.8%</b> and offset error 0.187 → 0.092 — from observing more, not from
+      tuning anything.</td></tr>
+  <tr><td><span class="chip c-low">HONEST</span></td>
+      <td>Nominal coverage needs conformal calibration against labelled outcomes, which needs the
+      human study. That dependency is now an explicit input to Session 15 rather than a hope.</td></tr>
+</table>
+
+<h2>Session 4 — one codebase, v1.0</h2>
+<table>
+  <tr><td><span class="chip c-done">4/7 → 7/7</span></td>
+      <td><b>Architectural conformance is complete.</b> C2 provenance, C5 order invariance and the
+      new C7 inquiry justification all pass. Every invariant is now something a reviewer verifies by
+      running <code>pytest</code>.</td></tr>
+  <tr><td><span class="chip c-done">D-20 FIXED</span></td>
+      <td><b>Belief revision is commutative.</b> All <b>120 permutations</b> of five extreme
+      observations agree to machine precision (was a 0.95 spread). Twenty confirming then twenty
+      disconfirming observations return the belief to <b>exactly 0.5</b> — the prototype couldn't.</td></tr>
+  <tr><td><span class="chip c-done">D-22 FIXED</span></td>
+      <td><b>The planner computes information now.</b> Mean regret against the oracle <b>0.579 → 0.000</b>,
+      and it no longer goes silent exactly when a discriminating observation is worth most.</td></tr>
+  <tr><td><span class="chip c-done">D-10 FIXED</span></td>
+      <td><b>One codebase.</b> The URG was built <i>on top of</i> your engine, not beside it — consent
+      gate, trauma guard, ambivalence, decay, topic scoping and refusal all retained. <b>Zero runtime
+      dependencies</b>: NetworkX removed entirely.</td></tr>
+  <tr><td><span class="chip c-done">D-13, D-14, D-24</span></td>
+      <td>Provenance recovers <b>2/2</b> parents (was 0/2). The EWK detector fires on its own flagship
+      scenario. Excitement is no longer labelled a threat under partial coverage (100% → 0%) while the
+      caution is kept.</td></tr>
+</table>
+
+<h2>Session 3 — engine v0.4: six defects fixed, three found</h2>
+<table>
+  <tr><td><span class="chip c-done">D-19 FIXED</span></td>
+      <td><b>The guard now refuses instead of degrading.</b> With the avoidance channel unobserved,
+      sensitivity goes <b>0.0% → 100.0%</b> and the false "hidden desire" rate <b>31.2% → 0.0%</b>
+      (62.5% → 0.0% on the compliance/fawn process). An absent channel is no longer read as evidence
+      of safety; <code>latent_approach</code> is only assertable under full confound coverage,
+      otherwise the answer is the new <code>unresolved_approach</code>.</td></tr>
+  <tr><td><span class="chip c-done">BONUS</span></td>
+      <td><b>Under full coverage the guard got more sensitive, not less</b> — genuine hidden
+      preference detected <b>80.6% → 87.1%</b> (aroused case 61.5% → 74.2%), with the misreading rate
+      still 0.0%.</td></tr>
+  <tr><td><span class="chip c-done">D-08 FIXED</span></td>
+      <td><b>The posterior responds to evidence now.</b> Where the model applies: ECE
+      <b>0.171 → 0.044</b> (0.000 at δ=0, n≥16) and AUC(uncertainty→error) <b>0.868 → 0.949</b>.</td></tr>
+  <tr><td><span class="chip c-high">D-23 NEW</span></td>
+      <td><b>…but calibration got worse where the model doesn't apply</b> — ECE
+      <b>0.151 → 0.221</b> for δ≥0.30. Reported, not tuned away: picking the threshold that flatters
+      the benchmark is the practice this programme exists to avoid.</td></tr>
+  <tr><td><span class="chip c-done">D-12 FIXED</span></td>
+      <td><b>Expired evidence stops being evidence.</b> Inference from decade-old observations
+      <b>100% → 0.0%</b>. Uncertainty now separates clear from ambiguous by <b>19×</b> (was 2.3×).</td></tr>
+  <tr><td><span class="chip c-med">D-24 NEW</span></td>
+      <td><b>Arousal alone can't tell fear from excitement</b> — with avoidance unobserved, excitement
+      is labelled a threat 100% of the time; specificity 100% → 67.0%. Safe, but the label
+      overclaims. Session 4.</td></tr>
+</table>
+
+<h2>Session 02c — adjudication of the second external draft</h2>
+<table>
+  <tr><td><span class="chip c-done">BETTER</span></td>
+      <td><b>Real progress:</b> human studies moved to future tense, Ethical Statement now honest,
+      explicit non-deployment disclaimer, Claim-to-Validation Matrix with failure signals, and
+      <b>four verified-correct citations</b> — including two excellent ones I did not have
+      (Schäfer 2025, DOI 10.1145/3757451; Vasileiou 2025, arXiv 2506.09977). <b>7 items adopted.</b></td></tr>
+  <tr><td><span class="chip c-crit">BLOCKER 1</span></td>
+      <td><b>The fabricated numbers survived the rewrite.</b> The abstract still carries
+      <code>t(39)=4.23</code>, "100% traceability", and §5.2 still quotes the <b>72%</b> and <b>41%</b>
+      baselines that exist in no file. Caveating a fabrication does not repair it — the problem is
+      existence of evidence, not strength of evidence.</td></tr>
+  <tr><td><span class="chip c-crit">BLOCKER 2</span></td>
+      <td><b>It cites a chatbot as a peer-reviewed source, six times</b> — reference [8],
+      "Consensus.app, 2026", is the sole authority for the paper's own limitations statements.
+      Reference [6] ("Rosenbacke 2026, Governing Reflective Human-AI Collaboration") <b>could not be
+      found</b> and reads as fabricated.</td></tr>
+  <tr><td><span class="chip c-crit">BLOCKER 3</span></td>
+      <td><b>Appendix C misdescribes your own repository.</b> It lists v0.3.0 as using NetworkX;
+      v0.3.0 has <b>zero dependencies</b> by design. It merges the AI-generated v1.0 with your actual
+      code under one version number — in the one table a reproducibility reviewer opens first.</td></tr>
+  <tr><td><span class="chip c-done">DELIVERED</span></td>
+      <td><b>A drop-in replacement abstract and results section</b>, written entirely from
+      <code>results.json</code>. Section 6 of the adjudication.</td></tr>
+  <tr><td><span class="chip c-med">TELL</span></td>
+      <td><b>Benchmark 2's headline moved from 78% to 100% between drafts and nobody noticed.</b>
+      A number that can drift 22 points unremarked is not measuring anything.</td></tr>
+</table>
+
+<h2>Session 02b — adjudication of an external draft</h2>
+<table>
+  <tr><td><span class="chip c-crit">REJECTED</span></td>
+      <td><b>Its proposed abstract reports an IRB-approved human-subjects programme in the past tense.</b>
+      "we introduce findings from IRB-approved human-subject studies… showing significant improvements…
+      we also report on initial high-stakes domain pilots." None of it exists. Fabricating an ethics
+      approval is the one claim journals actually verify.</td></tr>
+  <tr><td><span class="chip c-crit">REJECTED</span></td>
+      <td><b>It re-endorses the deleted benchmark</b> as "simulated human evaluator ratings", and claims the
+      100% traceability figure <i>"directly validates some of these invariants"</i> — when Invariant II
+      <b>fails</b> our conformance test (0 of 2 provenance parents recovered).</td></tr>
+  <tr><td><span class="chip c-crit">REJECTED</span></td>
+      <td><b>It proposes social-media scraping, facial-expression recognition and wearable integration</b> —
+      into a system whose founding commitment is that it is never pointed at a person without consent.
+      It never once mentions the consent gate, the trauma guard, ambivalence, or refusal.</td></tr>
+  <tr><td><span class="chip c-done">ADOPTED</span></td>
+      <td><b>9 items adopted, 5 with changes.</b> Best of them: the five human-reasoning metrics
+      (reflection depth, correction ratio, revision distance, falsification events, calibrated reliance)
+      — better than what I had, now in the Session 15 protocol. Plus the reframing table, low-stakes
+      pilots first, and asymmetric-evidence benchmarks.</td></tr>
+  <tr><td><span class="chip c-done">FOUND</span></td>
+      <td><b>Jacobs (2025), "Commutativity of probabilistic belief revision," <i>Frontiers in Cognition</i>.</b>
+      Bayesian updating <i>is</i> commutative; human cognition is not. Settles D-20: our order dependence
+      is a bug, not a recency model.</td></tr>
+  <tr><td><span class="chip c-med">CITATIONS</span></td>
+      <td><b>Of its checkable citations, none was fully correct</b> — two right papers wrong years, one
+      right paper wrong claim, one misattributed, one circular self-citation ("Moawad, 2026"), three
+      inherited from the Kimi reference list.</td></tr>
+</table>
+
+<h2>Headline findings, Session 2 — real benchmark results</h2>
+<table>
+  <tr><td><span class="chip c-done">RESULT</span></td>
+      <td><b>The trauma guard works, and the effect is large.</b> Rate of reading a threat
+      response as a hidden desire: <b>Shadow Mirror 0.0%</b> [0.0, 0.0] vs <b>75.1%</b> for an
+      arousal-as-desire baseline and <b>42.9%</b> for a mismatch-only baseline. Guard sensitivity
+      100%, specificity 94.4%. <i>n</i> = 400 per generative process. Cost: sensitivity to genuine
+      latent approach falls 100% → 80.6%.</td></tr>
+  <tr><td><span class="chip c-crit">D-19</span></td>
+      <td><b>…and it collapses silently when the avoidance channel is missing.</b> Guard sensitivity
+      drops to <b>0.0%</b>, false hidden-desire rate rises to <b>31.2%</b> (62.5% on the
+      compliance/fawn process). Cause: a missing channel is coerced to <code>0.0</code> — i.e. to
+      positive evidence <i>against</i> threat.</td></tr>
+  <tr><td><span class="chip c-high">D-08</span></td>
+      <td><b>Confidence carries almost no information about correctness.</b> Accuracy falls
+      99% → 55% across the misspecification sweep while reported confidence moves only
+      0.83 → 0.72. Underconfident when right (−0.19), <b>overconfident when wrong</b> (+0.17).</td></tr>
+  <tr><td><span class="chip c-high">D-20</span></td>
+      <td><b>Belief depends on the order evidence arrives.</b> Five identical pieces of evidence,
+      three orderings → <b>0.0396 / 0.9900 / 0.9900</b>. Posterior clipping is non-invertible.</td></tr>
+  <tr><td><span class="chip c-med">D-22</span></td>
+      <td><b>The "information-gain" planner computes no information gain.</b> Regret 0.579 vs
+      random 0.550 — indistinguishable. A real EIG planner reaches 0.16.</td></tr>
+  <tr><td><span class="chip c-med">—</span></td>
+      <td><b>The Gaussian-corner machinery does not beat a median split</b> on state recovery in any
+      of 20 cells. The contribution is the guard, the refusal and the traceability — not accuracy.</td></tr>
+</table>
+
+<h2>Headline findings, Session 1</h2>
+<table>
+  <tr><td><span class="chip c-crit">CRITICAL</span></td>
+      <td><b>Benchmark 3 measures nothing.</b> It runs a <i>t</i>-test on two hard-coded
+      <code>numpy</code> Gaussians. No Shadow Mirror code executes in it. The paper's headline
+      statistic <code>t(39)=4.23, p&lt;0.001</code> is a property of random seed 42.</td></tr>
+  <tr><td><span class="chip c-crit">CRITICAL</span></td>
+      <td><b>Six of twelve citations in the generated paper are wrong</b> — wrong title, wrong venue,
+      or two real papers conflated into one. Your monograph's own 96-entry bibliography is far more
+      reliable than the paper built on top of it.</td></tr>
+  <tr><td><span class="chip c-crit">CRITICAL</span></td>
+      <td><b>The submission PDF is watermarked “Generated by Kimi.ai”</b> on 8 of 9 pages.</td></tr>
+  <tr><td><span class="chip c-high">HIGH</span></td>
+      <td><b>Your engine's posterior never sharpens.</b> <i>n</i>=2 and <i>n</i>=100 give a
+      bit-identical posterior; uncertainty saturates at 0.235 after four observations. The
+      “Bayesian belief revision” description does not match the implementation.</td></tr>
+  <tr><td><span class="chip c-high">HIGH</span></td>
+      <td><b>The generated v1.0 deleted your actual contribution</b> — consent gate, trauma guard,
+      ambivalence state, temporal decay, topic scoping. v0.3.0 is the stronger artifact.</td></tr>
+  <tr><td><span class="chip c-done">GOOD</span></td>
+      <td><b>The monograph does not overclaim.</b> p.62 states the contribution is “its computational
+      objective and organization, <i>not</i> the invention of an entirely new probability theory.”
+      It already contains a falsifiability chapter, a claim-to-validation matrix and a
+      prohibited-use checklist.</td></tr>
+</table>
+
+<h2>Defect register</h2>
+<table>
+  <tr><th>ID</th><th>Sev</th><th>Where</th><th>Defect</th><th>Fix in</th></tr>
+  <tr><td>D-19</td><td><span class="chip c-done">FIXED</span></td><td>engine.py _infer_desire</td><td><s>Missing channel disables the guard</s> — sensitivity 0% → 100%</td><td>S3 ✅</td></tr>
+  <tr><td>D-23</td><td><span class="chip c-high">HIGH</span></td><td>engine.py v0.4</td><td>Overconfidence persists under severe misspecification (ECE 0.151→0.221)</td><td>S5</td></tr>
+  <tr><td>D-24</td><td><span class="chip c-med">MED</span></td><td>engine.py v0.4</td><td>Arousal-only coverage labels excitement as threat; specificity 67%</td><td>S4</td></tr>
+  <tr><td>D-25</td><td><span class="chip c-low">LOW</span></td><td>demo.py</td><td>Context strings passed into the topic slot</td><td>S4</td></tr>
+  <tr><td>D-20</td><td><span class="chip c-high">HIGH</span></td><td>bayesian_update</td><td>Posterior clipping → belief is order-dependent (0.04 vs 0.99)</td><td>S4</td></tr>
+  <tr><td>D-21</td><td><span class="chip c-done">FIXED</span></td><td>engine.py</td><td><s>No injectable clock</s> — <code>ShadowMirror(clock=…)</code></td><td>S3 ✅</td></tr>
+  <tr><td>D-22</td><td><span class="chip c-med">MED</span></td><td>InquiryPlanner</td><td>expected_benefit computes no information gain</td><td>S4</td></tr>
+  <tr><td>D-01</td><td><span class="chip c-done">FIXED</span></td><td>benchmark_suite.py §3</td><td><s>Fabricated result</s> — benchmark deleted in S2</td><td>S2 ✅</td></tr>
+  <tr><td>D-02</td><td><span class="chip c-crit">CRIT</span></td><td>IEEE abstract</td><td>Reports fabricated statistic</td><td>S6</td></tr>
+  <tr><td>D-03</td><td><span class="chip c-done">FIXED</span></td><td>IEEE §V</td><td><s>Invented baselines</s> — retired; two now have real implementations</td><td>S2 ✅</td></tr>
+  <tr><td>D-04</td><td><span class="chip c-crit">CRIT</span></td><td>IEEE refs</td><td>6 of 12 citations wrong title and/or venue</td><td>S6</td></tr>
+  <tr><td>D-05</td><td><span class="chip c-crit">CRIT</span></td><td>IEEE PDF</td><td>“Generated by Kimi.ai” watermark</td><td>S6</td></tr>
+  <tr><td>D-06</td><td><span class="chip c-done">FIXED</span></td><td>administrative</td><td>Byline confirmed: <b>Omar Moawad</b></td><td>S2 ✅</td></tr>
+  <tr><td>D-07</td><td><span class="chip c-done">FIXED</span></td><td>benchmark_suite.py §1–2</td><td><s>Tautological, n=1</s> — rebuilt with 200–500 sampled scenarios</td><td>S2 ✅</td></tr>
+  <tr><td>D-08</td><td><span class="chip c-done">FIXED</span></td><td>engine.py inference</td><td><s>Posterior invariant to sample size</s> — ECE 0.171 → 0.044</td><td>S3 ✅</td></tr>
+  <tr><td>D-09</td><td><span class="chip c-done">FIXED</span></td><td>engine.py report()</td><td><s>Two “threat probability” numbers</s> — now separately named</td><td>S3 ✅</td></tr>
+  <tr><td>D-10</td><td><span class="chip c-high">HIGH</span></td><td>strategy</td><td>v1.0 replaces rather than extends v0.3.0</td><td>S4</td></tr>
+  <tr><td>D-11</td><td><span class="chip c-done">FIXED</span></td><td>engine.py history</td><td><s>History mixes topics</s> — keyed per topic</td><td>S3 ✅</td></tr>
+  <tr><td>D-12</td><td><span class="chip c-done">FIXED</span></td><td>engine.py weighting</td><td><s>Decay missing from gate</s> — stale inference 100% → 0%</td><td>S3 ✅</td></tr>
+  <tr><td>D-13</td><td><span class="chip c-med">MED</span></td><td>EWK detect_tension</td><td>Never fires in the demo written to exhibit it</td><td>S4</td></tr>
+  <tr><td>D-14</td><td><span class="chip c-med">MED</span></td><td>trace_provenance</td><td>Truncates multi-parent DAGs → violates Invariant II</td><td>S4</td></tr>
+  <tr><td>D-15</td><td><span class="chip c-low">LOW</span></td><td>timestamps</td><td>Naive vs aware; blocks merging codebases</td><td>S4</td></tr>
+  <tr><td>D-16</td><td><span class="chip c-low">LOW</span></td><td>deprecations</td><td>utcnow() / node_link_data()</td><td>S4</td></tr>
+  <tr><td>D-17</td><td><span class="chip c-low">LOW</span></td><td>urg_visualization.png</td><td>Literal <code>\n</code> in node labels</td><td>S5</td></tr>
+  <tr><td>D-18</td><td><span class="chip c-low">LOW</span></td><td>IEEE paper</td><td>2,271 words vs ~8,000–11,000 expected</td><td>S6</td></tr>
+</table>
+
+<h2>Session roadmap</h2>
+
+<div class="phase">
+  <h3>Phase I — Repair</h3>
+  <table>
+    <tr><td style="width:44px">S1</td><td><span class="chip c-done">DONE</span></td><td>Audit &amp; program design</td></tr>
+    <tr><td>S2</td><td><span class="chip c-done">DONE</span></td><td>Honest benchmark suite v2 — 4 benchmarks, 5 baselines, bootstrap CIs, byte-reproducible; fabricated Benchmark 3 deleted</td></tr>
+    <tr><td>S3</td><td><span class="chip c-done">DONE</span></td><td>Engine v0.4 — D-08, D-09, D-11, D-12, <b>D-19</b>, D-21 fixed; 51 tests; head-to-head vs v0.3.0</td></tr>
+    <tr><td>S4</td><td><span class="chip c-done">DONE</span></td><td>v1.0 unified — 9 defects fixed, 78 tests, 7/7 conformance, zero dependencies</td></tr>
+    <tr><td>S5</td><td><span class="chip c-done">DONE</span></td><td>Ten invariants executable; 294 tests; D-23 characterised and partially mitigated</td></tr>
+  </table>
+</div>
+
+<div class="phase">
+  <h3>Phase II — Verify the manuscript</h3>
+  <table>
+    <tr><td style="width:44px">S6</td><td><span class="chip c-done">DONE</span></td><td>96 entries checked, 0 errors; venue settled (AIES/FAccT then TiiS)</td></tr>
+    <tr><td>S7</td><td><span class="chip c-done">DONE</span></td><td>7 findings; corrected formal appendix delivered; operator map with 2 recorded gaps</td></tr>
+    <tr><td>S8</td><td><span class="chip c-done">DONE</span></td><td>Appendices C and D rebuilt; ambivalence precision 34% → 98%</td></tr>
+    <tr><td>S9</td><td><span class="chip c-done">DONE</span></td><td>Art. 5(1)(f) exposure found; education pilot withdrawn; checklist made enforceable</td></tr>
+  </table>
+</div>
+
+<div class="phase">
+  <h3>Phase III — Write the papers</h3>
+  <table>
+    <tr><td style="width:44px">S10</td><td><span class="chip c-todo">NEXT</span></td><td><b>P2 — Ethics-of-design paper</b> (AIES / FAccT / CHI). Fastest route to publication: no human subjects needed.</td></tr>
+    <tr><td>S11</td><td><span class="chip c-done">DONE</span></td><td><b>P1 drafted in full</b> — executable invariant specification; all numbers traced</td></tr>
+    <tr><td>S12</td><td><span class="chip c-done">DONE</span></td><td>Six figures + four defects closed; v1.1.0, 324 tests</td></tr>
+    <tr><td>S13</td><td><span class="chip c-done">DONE</span></td><td>14 attacks: 5 conceded, 4 rebutted with new evidence, 5 fixed; both drafts patched</td></tr>
+    <tr><td>S14</td><td><span class="chip c-crit">BLOCKED</span></td><td>Submission packages, cover letters, AI-use disclosure</td></tr>
+  </table>
+</div>
+
+<div class="phase">
+  <h3>Phase IV — Enable the empirical work</h3>
+  <table>
+    <tr><td style="width:44px">S15</td><td><span class="chip c-todo">TODO</span></td><td>Human-study protocol + full IRB packet</td></tr>
+    <tr><td>S14</td><td><span class="chip c-done">DONE</span></td><td>Related work (105 refs verified), affiliation, Phase IV data feasibility</td></tr>
+    <tr><td>S15</td><td><span class="chip c-done">DONE</span></td><td>Formation model, Invariant XI, 12 refusal grounds, v1.2.0</td></tr>
+    <tr><td>S16</td><td><span class="chip c-done">DONE</span></td><td>Papers reconciled to 11 invariants; D-34; permission letters</td></tr>
+    <tr><td>S17</td><td><span class="chip c-done">DONE</span></td><td>Workaround hunt; 2 substitutions; mutation score; Outstanding Work appendix</td></tr>
+    <tr><td>S18</td><td><span class="chip c-done">DONE</span></td><td>Route A loaders + analyses; AUC IRB packet drafted</td></tr>
+    <tr><td>S17</td><td><span class="chip c-todo">TODO</span></td><td>Deployable, consent-gated study instrument</td></tr>
+    <tr><td>S18+</td><td><span class="chip c-todo">TODO</span></td><td>Analysis and P3, on your data</td></tr>
+  </table>
+</div>
+
+<h2>Open questions blocking specific sessions</h2>
+<div class="q" style="border-left-color:var(--ok)"><b>Q1 · Author byline — ANSWERED</b><span>Author of record is <b>Omar Moawad</b>. Applied to all deliverables from Session 2 onward. D-06 closed.</span></div>
+<div class="q" style="border-left-color:var(--ok)"><b>Q2 · Institutional affiliation — ANSWERED</b><span><b>The American University in Cairo</b>, AUC Avenue, P.O. Box 74, New Cairo 11835, Egypt — address taken verbatim from AUC's own Editorial Style Guide. Applied to both papers. Sessions 15–16 unblocked.</span></div>
+<div class="q" style="border-left-color:var(--ok)"><b>Q3 · Kimi paper — RESOLVED by the venue decision</b><span>It targeted IEEE TAC, which is now ruled out. P2 and P1 will be written fresh.</span></div>
+<div class="q"><b>Q4 · Phase IV — now a three-way choice</b><span>Superseded by Session 14B. <b>A</b> secondary analysis on BIRAFFE2 + FOODEEG + Urban Appraisal, no participants, ~2 sessions. <b>B</b> hand-check the SWELL-KW deposit first, then A — low cost, real upside. <b>C</b> primary study via AUC IRB + CAPMAS permit + PDPL licence. Recommendation: <b>B then A</b>, with C written as a protocol rather than executed. Awaiting your decision.</span></div>
+<div class="q"><b>Q7 · Three dataset downloads</b><span>BIRAFFE2 needs only <code>BIRAFFE2-procedure.zip</code> (35 MB); Urban Appraisal only its git metadata (16 MB); FOODEEG 31.6 GB raw, or the git mirror for the behavioural files. I cannot pull archives into this environment.</span></div>
+<div class="q"><b>Q8 · Urban Appraisal rating polarity</b><span>Undocumented in the archive. Resolve from the BeMoBIL analysis code or the preprint. The loader refuses until you supply it — a wrong value inverts every result silently.</span></div>
+<div class="q"><b>Q5 · Corresponding email, and department?</b><span>The only remaining gap in the author block. Blocks the final submission packet.</span></div>
+<div class="q"><b>Q6 · Two permission emails now, not four</b><span>ESS-HVS and ASTI-R replaced the PVQ-RR and 3D-WS requests outright. Only <b>Bronk (CPS)</b> and <b>Darling-Fisher (MEPSI)</b> remain — and neither has a free substitute, which is why both are in the Outstanding Work appendix.</span></div>
+
+<h2>Paper split strategy</h2>
+<table>
+  <tr><th>Paper</th><th>Content</th><th>Venue</th><th>Human subjects?</th></tr>
+  <tr><td><b>P2</b></td><td>Ethics of design: consent as versioned state transition, refusal as a first-class output, the trauma guard, prohibited-use</td><td>AIES / FAccT / CHI</td><td><span class="chip c-done">No</span></td></tr>
+  <tr><td><b>P1</b></td><td>Architecture: URG, ten invariants, conformance results, component contracts</td><td>ACM TiiS / AI Magazine</td><td><span class="chip c-done">No</span></td></tr>
+  <tr><td><b>P3</b></td><td>Empirical EWK calibration study</td><td>IEEE TAC / CHI</td><td><span class="chip c-crit">Yes — IRB</span></td></tr>
+</table>
+
+<footer>
+  Updated after Session 18 · 25 July 2026. Machine-readable state in <code>STATE.json</code>;
+  full findings in <code>SESSION_01_AUDIT.md</code>, <code>SESSION_02_BENCHMARKS.md</code> <code>SESSION_02B_DRAFT_ADJUDICATION.md</code> <code>SESSION_02C_DRAFT2_ADJUDICATION.md</code> <code>SESSION_03_ENGINE_V04.md</code> <code>SESSION_04_UNIFIED_V1.md</code> <code>SESSION_05_INVARIANTS_D23.md</code> <code>SESSION_06_BIBLIOGRAPHY_VENUE.md</code> <code>SESSION_07_FORMALISM.md</code> <code>SESSION_08_CLAIM_MATRIX.md</code> <code>SESSION_09_ETHICS_REGULATORY.md</code> <code>P2_AIES_FAccT_draft.md</code> <code>P1_ACM_TiiS_draft.md</code> <code>SESSION_12_ASSETS_DEFECTS.md</code> <code>SESSION_13_ADVERSARIAL_REVIEW.md</code> <code>SESSION_14_RELATED_WORK_AND_AFFILIATION.md</code> <code>SESSION_14B_DATA_FEASIBILITY.md</code> <code>SESSION_15_FORMATION_MODEL.md</code> <code>INSTRUMENT_PERMISSION_EMAILS.md</code> <code>SESSION_17_WORKAROUND_HUNT.md</code> and <code>AUC_IRB_PACKET.md</code>; plan in <code>PROGRAM_PLAN.md</code>.
+  <b>Awaiting the Phase IV decision (A / B / C)</b> — see <code>SESSION_14B_DATA_FEASIBILITY.md</code> §4.
+</footer>
+
+</div>
+</body>
+</html>

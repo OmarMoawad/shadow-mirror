@@ -72,6 +72,30 @@ def assess_safety(mirror: "ShadowMirror", topic=None) -> SafetyReport:
             "read this as 'you secretly want it'.",
         )
 
+    # 1b. v0.4 (D-19): partial observation of the confound channels. Without
+    # both arousal and avoidance we cannot separate a hidden preference from a
+    # threat response, so the system refuses that reading rather than guessing.
+    if getattr(belief, "guard_coverage", "full") != "full" and \
+            belief.desire.get("unresolved_approach", 0.0) > 0.15:
+        report.add(
+            "insufficient_confound_coverage",
+            "Your behaviour leans toward something you say you don't want, but "
+            "arousal and avoidance were not both observed -- so a hidden "
+            "preference cannot be told apart from a threat response. No hidden "
+            "want is being asserted. Logging an arousal or avoidance observation "
+            "would resolve this.",
+        )
+
+    # 1c. v0.4: none of the named hypotheses fit the evidence.
+    if max(belief.knowledge.get("unmodelled", 0.0),
+           belief.desire.get("unmodelled", 0.0)) >= 0.40:
+        report.add(
+            "unmodelled",
+            "The evidence does not sit close to any hypothesis this instrument "
+            "holds. That is a limit of the instrument, not a fact about you.",
+            suppress=True,
+        )
+
     # 2. Honest ignorance.
     if belief.uncertainty >= UNCERTAINTY_THRESHOLD:
         report.add(
@@ -81,7 +105,7 @@ def assess_safety(mirror: "ShadowMirror", topic=None) -> SafetyReport:
         )
 
     # 3. Fluidity -- snapshot, not biography.
-    if mirror._instability() >= INSTABILITY_THRESHOLD:
+    if mirror._instability(topic) >= INSTABILITY_THRESHOLD:
         report.add(
             "instability",
             "Your recent snapshots disagree with each other. This is a moment, not "
@@ -89,7 +113,7 @@ def assess_safety(mirror: "ShadowMirror", topic=None) -> SafetyReport:
         )
 
     # 4. Reactivity / Heisenberg. Grows with how often the mirror is consulted.
-    n_reflections = len(mirror.belief_history)
+    n_reflections = mirror.n_reflections()
     if n_reflections >= REACTIVITY_SOFT_CAP:
         report.add(
             "reactivity",

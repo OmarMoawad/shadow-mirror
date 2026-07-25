@@ -13,3 +13,9 @@ venv/
 *.journal.json
 mirror.db
 .shadow_mirror/
+
+# Mutation testing output
+mutants/
+
+# Regenerated locally by verify_claims.py
+verify_claims_output.json

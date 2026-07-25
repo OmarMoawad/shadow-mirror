@@ -1,200 +1,165 @@
 # Shadow Mirror
 
-A consent-based, probabilistic **reflection** engine, in two modes:
+**A reference architecture for reflective human–AI interaction, and the research programme around it.**
 
-1. **Self-mirror** — you hold the mirror about *yourself*.
-2. **Consented study** — you study *another person, only with their informed,
-   granular, revocable consent* (see below and [`ETHICS.md`](ETHICS.md)).
+**Author of record:** Omar Moawad
+**Affiliation:** The American University in Cairo, AUC Avenue, P.O. Box 74, New Cairo 11835, Egypt
+**Programme:** 18 sessions, complete · **Package:** `shadow_mirror` v1.3.0
 
-It does **not** classify who a person "really is." It estimates *dated, uncertain*
-hypotheses about the tension between what someone **says**, what they can **do**,
-and what they **do** — and turns those tensions into **questions to sit with**,
-never verdicts.
+---
 
-This is the buildable form the concept documents and both external critiques
-converged on: not a "shadow algorithm" that reads people covertly, but a mirror
-that holds contradictions up — dated, un-collapsed — and, when it is pointed at
-another person, only ever with that person's eyes-open agreement.
+## Start here
 
-## Why it's shaped this way
+If you have five minutes, open `tracker/shadow_mirror_program_tracker.html` in a browser. It is the
+whole programme on one page.
 
-| Concept-doc concern | How the code answers it |
+If you have an hour, read `papers/UNIFIED_DRAFT.md`, then `papers/APPENDIX_OUTSTANDING_WORK.md` —
+which lists everything the draft cannot yet support — then `sessions/SESSION_13_ADVERSARIAL_REVIEW.md`,
+which attacks the papers.
+
+If you want to run something:
+
+```bash
+pytest -q                        # 707 passed, 2 xfailed
+python verify_claims.py          # re-derives the claims used in the unified draft
+python demo.py
+python make_urg_visualization.py # regenerates urg_visualization.png from a real graph
+```
+
+No dependencies to install. The package has **zero runtime dependencies** by design — that is an
+auditability commitment, not an aesthetic one, and it is why NetworkX was removed in Session 4.
+
+---
+
+## What this is
+
+A consent-based, probabilistic **reflection** engine, in two modes: **self-mirror**, where you hold
+the mirror about yourself, and **consented study**, where you study another person only with their
+informed, granular, revocable consent (see [`ETHICS.md`](ETHICS.md)).
+
+It does **not** classify who a person "really is". It estimates dated, uncertain hypotheses about the
+tension between what someone *says*, what they can *do*, and what they *do* — and turns those tensions
+into questions to sit with, never verdicts.
+
+The central design claim is that when what a person says and what they do disagree, the honest output
+is frequently a **refusal** rather than a better-hedged guess — because approach under stated
+reluctance is produced by hidden preference, and it is *also* produced by compliance under perceived
+pressure, and the two are not distinguishable from the surface signal.
+
+**Measured result:** 0 of 800 simulated threat episodes misread (95% upper bound 0.37% by the rule of
+three) against 42.9% for a mismatch-only reader and 75.1% for an arousal-as-desire reader.
+
+**Measured cost:** a supervised four-channel classifier, given ground-truth labels, beats us at low
+channel separation — 5.0% against our 29.7%. That is in the papers because a reviewer would find it
+otherwise. The defence is that those labels do not exist in deployment, which makes it an upper bound
+on what any supervised method could reach rather than an available alternative.
+
+---
+
+## Layout
+
+| Path | What it is |
+|---|---|
+| `shadow_mirror/` | The package. Zero runtime dependencies |
+| `tests/` | 707 passing, 2 declared `xfail`s recording unimplemented operators |
+| `papers/` | The unified draft, the two venue-targeted papers, appendices, bibliography, figures |
+| `sessions/` | Eighteen session reports, `PROGRAM_PLAN.md`, and `STATE.json` |
+| `submission/` | AUC IRB packet and instrument permission letters. **Not submitted** |
+| `tracker/` | The programme on one HTML page |
+| `archive/` | The full conversation transcript that produced the work |
+| `verify_claims.py` | Re-derives every quantitative claim used in the unified draft |
+| `make_urg_visualization.py` | Draws the Unified Reflective Graph from a real graph |
+
+### `papers/`
+
+| File | What it is |
+|---|---|
+| `UNIFIED_DRAFT.md` | **The unified paper.** Merges the architecture and ethics strands; supersedes P1/P2 where they disagree |
+| `APPENDIX_OUTSTANDING_WORK.md` | **Read this before believing the draft.** What is blocked, what a search resolved, what would change the conclusions |
+| `P1_ACM_TiiS_draft.md` | *Invariants You Can Run* — the architecture paper. Target: ACM TiiS |
+| `P2_AIES_FAccT_draft.md` | *Refusal as a Safety Mechanism* — the ethics paper. Target: AIES / FAccT |
+| `FORMAL_APPENDIX_corrected.md` | Notation, operator signatures, belief axioms, complexity table |
+| `bibliography.json` | Manuscript references, machine-checked |
+| `make_bibliography.py` | Generates `shadow_mirror_sources.bib` from the above |
+
+> **P1 and P2 carry four figures superseded by Session 12.** See **OW-7** in the outstanding-work
+> appendix. The unified draft carries the corrected values and states where it departs from them.
+
+### `shadow_mirror/`
+
+| Module | What it does |
+|---|---|
+| `engine.py` | Inference over stated desire, behaviour, arousal and avoidance |
+| `urg.py` | Unified Reflective Graph — typed nodes, multi-parent provenance, contradiction as a first-class edge |
+| `beliefs.py` | Order-invariant, exactly retractable belief revision |
+| `inquiry.py` | Expected information gain over candidate questions |
+| `invariants.py` | **Eleven** architectural properties as callable checks |
+| `credible.py` | Credible sets, soft-EM person offsets with an identifiability guard |
+| `deployment.py` | Refuses the biometric stream outside self/consented contexts |
+| `ledger.py` | Hash-chained append-only consent; refuses retroactive grants |
+| `formation.py` | Declared-only personhood, instrument registry, named refusals |
+| `route_a.py` | Loaders and analyses for three public corpora |
+
+**Mutation score: 59.9%** (5,114 mutants, 2,319 killed, 1,549 survived). Reported rather than tuned.
+
+---
+
+## Why it is shaped this way
+
+| Concern | How the code answers it |
 |---|---|
 | No ground truth for "unknown" quadrants | Posterior *distributions* over states; refuses to infer below a minimum of paired evidence |
-| Fluidity — states shift by the hour | Every output is a **dated snapshot** with an uncertainty interval; an instability flag when snapshots disagree |
-| Heisenberg / reactivity | A `reactivity` caution that grows the more you consult it |
-| Trauma landmine | `threat_response` is a **first-class hypothesis**; arousal + avoidance is never collapsed into "want", and its caution surfaces *first*, even under suppression |
-| "Output is a question, not a profile" | The reflection layer only ever emits open-ended questions |
-| Contradiction is often the fact, not a puzzle | A first-class **`ambivalence`** state holds "wants and doesn't want at once" un-collapsed, instead of forcing a winner |
+| Fluidity — states shift by the hour | Every output is a **dated snapshot** with an uncertainty interval |
+| Reactivity — looking changes the reading | A `reactivity` caution that grows the more you consult it |
+| The trauma landmine | `threat_response` is a **first-class hypothesis**; arousal + avoidance is never collapsed into "want" |
+| Output should be a question, not a profile | The reflection layer only ever emits open-ended questions |
+| Contradiction is often the fact, not a puzzle | A first-class **`ambivalence`** state holds "wants and doesn't want at once" un-collapsed |
 | Per-question, not one global type | **Topic scoping** keeps "algebra" and "public speaking" separate |
-| Stale readings shouldn't dominate | **Temporal decay** (configurable half-life) + per-observation **reliability** weights |
-| Right to inspect / correct / refuse | Local JSON, full `export`, irreversible `forget` |
+| Stale readings shouldn't dominate | **Temporal decay** plus per-observation reliability weights |
+| A missing channel is not a safe channel | An unobserved channel is recorded as **absent**, never imputed to zero |
+| Consent must be demonstrable, not asserted | A hash-chained append-only ledger answers *what was granted at time T* |
 
-## Architecture (four layers)
+---
 
-```
-Observation  →  Inference        →  Safety              →  Reflection
-(what you     (Bayesian posterior   (threat / reactivity   (questions,
- log, dated)   over hypotheses)      / instability guards)   never labels)
-```
+## The ground rules
 
-- `models.py` — timestamped observations and dated belief snapshots
-- `engine.py` — the Bayesian latent-state inference (deterministic, stdlib-only)
-- `safety.py` — the confound and over-interpretation guards
-- `reflect.py` — turns a posterior into questions
-- `store.py` — local, self-owned persistence with consent, export, and delete
-- `cli.py` — the `shadow` command
+These governed every session, and most of what is unusual about this repository follows from them.
 
-## Install / run
+1. **No fabricated evidence, ever.** Every number in a paper is produced by code in this repository.
+2. No human-subjects data is collected. Simulated participants are never called a result.
+3. No text enters a manuscript in the past tense describing work not performed.
+4. **No number enters a manuscript unless a file in the repository produces it AND the person writing
+   the sentence has run that file.**
+5. No additional evidence channel is added until the guard **refuses** rather than silently degrading.
+6. **No citation enters a manuscript unless confirmed against a live source** with a resolvable
+   identifier.
+7. No instrument is administered whose permission terms are unconfirmed, and no item text is bundled
+   with the software.
+8. **Nothing about a person enters a model unless that person declared it or self-completed the
+   instrument it came from.** Absence is not refusal — a refusing method must exist and explain itself.
+9. **Nothing is recorded as pending until a search for a substitute has come back empty.**
 
-No dependencies. Standard library only (Python ≥ 3.9).
+---
 
-```bash
-# from this folder
-python -m shadow_mirror consent          # acknowledge self-use terms (once)
-python -m shadow_mirror log knowledge self_report 0.9 -t recursion -c "feel solid"
-python -m shadow_mirror log knowledge task_performance 0.3 -t recursion -c "quiz"
-python -m shadow_mirror reflect -t recursion   # questions to sit with (scoped)
-python -m shadow_mirror report  -t recursion   # full posterior + safety, as JSON
-python -m shadow_mirror topics                 # list topics + evidence counts
+## What is not done
 
-python demo.py                            # a scripted walkthrough (4 scenarios)
-```
+The full list is `papers/APPENDIX_OUTSTANDING_WORK.md`. The short version:
 
-Flags for `log`: `-t/--topic` (what it's about), `-c/--context` (free text),
-`-r/--reliability` (0..1, how much to trust this one datum).
+- **No human-subjects evidence exists.** Nothing here establishes any effect on human reasoning,
+  comprehension, trust or wellbeing, and no such claim is made.
+- **The threat-confound claim requires primary collection.** No public corpus has the four-way
+  intersection of stated stance, contradictable choice, time-locked arousal and a coercion
+  manipulation.
+- **No party outside this project has executed the software.**
+- **The benchmark scripts that produce the headline numbers are missing** (OW-6). Recovering them is
+  the first thing to do.
 
-Optional install so you can just type `shadow`:
+---
 
-```bash
-pip install -e .
-shadow reflect
-```
+## Citation
 
-### Signals you can log
+> Moawad, O. (2026). *Shadow Mirror: a reference architecture for reflective human–AI interaction.*
+> The American University in Cairo.
 
-`AXIS` ∈ `knowledge | desire`. `VALUE` ∈ `[0, 1]`.
-
-| SIGNAL | Axis | Meaning |
-|---|---|---|
-| `self_report` | both | stated confidence / stated want |
-| `task_performance` | knowledge | how you actually performed |
-| `behavior` | desire | how much you actually approached |
-| `implicit_task` | desire | an indirect approach/avoidance measure |
-| `physiological` | desire | arousal proxy — **threat confound only** |
-| `avoidance` | desire | observed avoidance — **threat confound only** |
-
-The engine needs at least **2 paired observations** on an axis before it will say
-anything. That restraint is intentional.
-
-## Studying a consenting other person
-
-The second mode does what "get to know the people around you" was *supposed* to
-mean — minus the covert part. It reads a person's **first reaction** to a
-recurring condition, watches how that reaction can invert into a
-**counter-pattern** across encounters, and models **emotion as the antecedent
-cause that bends the behaviour** (appraisal theory: a condition is appraised, the
-appraisal *is* the emotion, the emotion carries an action tendency). It is
-idiographic — per person, per condition — because the same condition evokes
-different emotions in different people.
-
-None of it runs without consent. Consent is **granular and revocable**: each data
-stream is granted on its own, and the streams a person *cannot notice about
-themselves* (implicit measures, physiological arousal, micro-avoidance) require
-their own explicit acknowledgement — they cannot be bundled under a blanket yes.
-No grant, no datum; the code refuses rather than records.
-
-```bash
-shadow subject consent alex                      # informed, per-stream consent flow (run it WITH them)
-shadow subject encounter alex "criticism" \
-      --valence 0.30 --action 0.15 --arousal 0.4 --stream self_report
-# ... log more encounters with the same condition over time ...
-shadow subject patterns alex -c criticism        # first-reaction / counter-pattern questions
-shadow subject records alex                       # everything held about them (their right to see)
-shadow subject revoke alex                         # withdraw consent + wipe their data
-shadow subject list                                # subjects, consent state, counts
-```
-
-**What it reports** for a condition: the first reaction; whether a counter-pattern
-emerged; and — the interesting part — its *driver*:
-
-- **`coupling_shift`** — the behaviour reversed while the feeling stayed the same:
-  the *same emotion* came to bend the behaviour the other way (adaptation/learning,
-  not a changed heart).
-- **`emotion_shift`** — the feeling itself flipped, and the behaviour followed.
-- **`both`** — feeling and behaviour both reversed.
-
-Plus an **emotion-as-cause** coupling (how valence/arousal predict approach vs.
-withdrawal *for this person, here*) — always as a small-sample hypothesis, never a
-proven mechanism.
-
-The trauma guard carries over intact: if the later reactions are high-arousal
-withdrawal, that is flagged as a **safety response** and surfaced *first* — never
-relabelled as "they revealed a hidden dislike."
-
-```python
-from shadow_mirror import ConsentGrant, Study
-
-grant = ConsentGrant("alex", purpose="understand our recurring friction")
-grant.domains = {"reaction_patterns", "emotion_behavior"}
-grant.add_stream("self_report")
-grant.add_stream("physiological", acknowledged_non_obvious=True)  # explicit, per-stream
-
-study = Study(grant)
-study.observe("criticism", valence=0.30, action=0.15, arousal=0.5)  # refused if stream ungranted
-# ... more encounters over time ...
-print(study.patterns("criticism").questions)
-```
-
-## Library use
-
-```python
-from shadow_mirror import ShadowMirror, reflective_prompts
-
-m = ShadowMirror()
-m.add_batch([
-    ("knowledge", "self_report", 0.9),
-    ("knowledge", "task_performance", 0.3),
-    ("knowledge", "self_report", 0.85),
-    ("knowledge", "task_performance", 0.35),
-])
-print(m.report())
-for q in reflective_prompts(m):
-    print(q)
-```
-
-## Tests
-
-```bash
-pip install pytest
-pytest
-```
-
-The tests verify the *commitments*, not just the plumbing: sufficiency gating,
-each evidence corner pulling the right way, and — most importantly —
-`test_safety.py` proving arousal + avoidance is **not** read as a hidden want.
-
-## What this is not
-
-Read [`ETHICS.md`](ETHICS.md) before extending it. In short: never point it at
-another person, never use it covertly, never treat a most-likely label as truth.
-The weights encode the *shape* of the hypotheses, not validated facts about people.
-
-## Status
-
-`v0.3.0` — adds the **consented-study** mode: a granular/revocable consent layer
-(`consent.py`), a consent-gated study session (`study.py`), and the
-first-reaction / counter-pattern engine with emotion-as-cause (`patterns.py`).
-The self-mirror (`engine.py`) is unchanged. Grounded in the research on *dynamic
-consent*, *appraisal theory / action tendencies*, *idiographic EMA & state
-transitions*, and the known validity limits of implicit/physiological affect
-signals — hence: hypotheses, not verdicts.
-
-Still a named research thread. It is **not** wired into PPDS and should not be
-until PPDS itself is validated; any other-person use stays behind the consent gate
-that ships here. Read [`ETHICS.md`](ETHICS.md) before extending — the consent gate
-is the load-bearing wall.
-
-Prior: `v0.2.0` folded in temporal decay, reliability weighting, topic scoping,
-and the `ambivalence` state, keeping the deterministic Gaussian-corner inference,
-local JSON storage, and the tested trauma guard.
+The software is a research instrument. **It is not suitable for clinical, educational, employment,
+credit, insurance or policing use**, and it refuses to run in institutional deployment contexts.

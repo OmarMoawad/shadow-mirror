@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone
-from typing import Any, Dict, Literal
+from typing import Any, Dict, Literal, Optional
 
 
 # Two hidden axes, plus a derived "reactivity" bookkeeping axis.
@@ -92,6 +92,12 @@ class BeliefState:
     uncertainty: float
     n_observations: int
     timestamp: str = field(default_factory=_now_iso)
+    # v0.4 (D-09): the raw, gate-facing confound score, kept distinct from the
+    # posterior mass on the threat_response hypothesis. ``None`` means the score
+    # could not be computed because no confound channel was observed.
+    threat_confound_score: Optional[float] = None
+    # v0.4 (D-19): which confound channels were actually observed.
+    guard_coverage: str = "none"
 
     def top_knowledge(self) -> str:
         return max(self.knowledge, key=self.knowledge.get)
@@ -111,6 +117,8 @@ class BeliefState:
             uncertainty=d["uncertainty"],
             n_observations=d.get("n_observations", 0),
             timestamp=d.get("timestamp", _now_iso()),
+            threat_confound_score=d.get("threat_confound_score"),
+            guard_coverage=d.get("guard_coverage", "none"),
         )
 
 
@@ -134,6 +142,12 @@ DESIRE_HYPOTHESES = (
     "latent_avoidance",      # endorses, yet acts away
     "ambivalence",           # wants and doesn't want at once; not resolved
     "threat_response",       # arousal + avoidance: a threat signal, not a want
+    # v0.4: behaviour approaches while the person states aversion, but the
+    # mechanism cannot be determined because the confound channels were not
+    # observed. This is a refusal, not a weak "latent_approach".
+    "unresolved_approach",
+    # v0.4: none of the named hypotheses explain the evidence.
+    "unmodelled",
 )
 
 # The four *directional* desire states that live on the (want, action) plane.

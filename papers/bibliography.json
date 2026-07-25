@@ -1,0 +1,1419 @@
+{
+ "monograph_bibliography_audited_session_6": [
+  {
+   "text": "Alchourrón, C. E., Gärdenfors, P., & Makinson, D. (1985). On the logic of theory change: Partial meet contraction and revision functions. Journal of Symbolic Logic, 50(2), 510–530. https://doi.org/10.2307/2274239",
+   "year": 1985,
+   "doi": "10.2307/2274239",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Amershi, S., Weld, D., Vorvoreanu, M., Fourney, A., Nushi, B., Collisson, P., et al. (2019). Guidelines for human–AI interaction. Proceedings of CHI 2019. https://doi.org/10.1145/3290605.3300233",
+   "year": 2019,
+   "doi": "10.1145/3290605.3300233",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Bansal, G., Nushi, B., Kamar, E., Horvitz, E., & Weld, D. S. (2021). Is the most accurate AI the best teammate? Optimizing AI for teamwork. Proceedings of AAAI, 35(13), 11405–11414. https://doi.org/10.1609/aaai.v35i13.17359",
+   "year": 2021,
+   "doi": "10.1609/aaai.v35i13.17359",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Barrett, L. F., Adolphs, R., Marsella, S., Martinez, A. M., & Pollak, S. D. (2019). Emotional expressions reconsidered: Challenges to inferring emotion from human facial movements. Psychological Science in the Public Interest, 20(1), 1–68. https://doi.org/10.1177/1529100619832930",
+   "year": 2019,
+   "doi": "10.1177/1529100619832930",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Brier, G. W. (1950). Verification of forecasts expressed in terms of probability. Monthly Weather Review, 78(1), 1–3. https://doi.org/10.1175/1520-0493(1950)078%3C0001:VOFEIT%3E2.0.CO;2",
+   "year": 1950,
+   "doi": "10.1175/1520-0493(1950)078%3C0001:VOFEIT%3E2.0.CO;2",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Buolamwini, J., & Gebru, T. (2018). Gender Shades: Intersectional accuracy disparities in commercial gender classification. Proceedings of the Conference on Fairness, Accountability and Transparency, PMLR 81, 77–91. https://proceedings.mlr.press/v81/buolamwini18a.html",
+   "year": 2018,
+   "doi": null,
+   "url": "https://proceedings.mlr.press/v81/buolamwini18a.html",
+   "arxiv": null
+  },
+  {
+   "text": "Budin-Ljøsne, I., Teare, H. J. A., Kaye, J., Beck, S., Bentzen, H. B., Caenazzo, L., et al. (2017). Dynamic consent: A potential solution to some of the challenges of modern biomedical research. BMC Medical Ethics, 18, 4. https://doi.org/10.1186/s12910-016-0162-9",
+   "year": 2017,
+   "doi": "10.1186/s12910-016-0162-9",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Calvo, R. A., & D’Mello, S. (2010). Affect detection: An interdisciplinary review of models, methods, and their applications. IEEE Transactions on Affective Computing, 1(1), 18–37. https://doi.org/10.1109/T-AFFC.2010.1 Collins, G. S., Moons, K. G. M., Dhiman, P., Riley, R. D., Beam, A. L., Van Calster, B., et al. (2024). TRIPOD+AI statement: Updated guidance for reporting clinical prediction models that use regression or machine learning methods. BMJ, 385, e078378. https://doi.org/10.1136/bmj-2023-078378",
+   "year": 2010,
+   "doi": "10.1109/T-AFFC.2010.1",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Cronbach, L. J., & Meehl, P. E. (1955). Construct validity in psychological tests. Psychological Bulletin, 52(4), 281–302. https://doi.org/10.1037/h0040957",
+   "year": 1955,
+   "doi": "10.1037/h0040957",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Cruz Rivera, S., Liu, X., Chan, A.-W., Denniston, A. K., & Calvert, M. J. (2020). Guidelines for clinical trial protocols for interventions involving artificial intelligence: The SPIRIT-AI extension. BMJ, 370, m3210. https://doi.org/10.1136/bmj.m3210",
+   "year": 2020,
+   "doi": "10.1136/bmj.m3210",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Dawid, A. P. (1982). The well-calibrated Bayesian. Journal of the American Statistical Association, 77(379), 605–610. https://doi.org/10.1080/01621459.1982.10477856",
+   "year": 1982,
+   "doi": "10.1080/01621459.1982.10477856",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Deci, E. L., & Ryan, R. M. (2000). The “what” and “why” of goal pursuits: Human needs and the self-determination of behavior. Psychological Inquiry, 11(4), 227–268. https://doi.org/10.1207/S15327965PLI1104_01",
+   "year": 2000,
+   "doi": "10.1207/S15327965PLI1104_01",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Doshi-Velez, F., & Kim, B. (2017). Towards a rigorous science of interpretable machine learning. arXiv:1702.08608. https://arxiv.org/abs/1702.08608",
+   "year": 2017,
+   "doi": null,
+   "url": "https://arxiv.org/abs/1702.08608",
+   "arxiv": "1702.08608"
+  },
+  {
+   "text": "el Kaliouby, R., & Robinson, P. (2004). Real-time inference of complex mental states from facial expressions and head gestures. CVPR Workshops. https://doi.org/10.5555/1032641.1033044",
+   "year": 2004,
+   "doi": "10.5555/1032641.1033044",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "el Kaliouby, R., & Robinson, P. (2005). Real-time inference of complex mental states from facial expressions and head gestures. In Real-Time Vision for Human–Computer Interaction (pp. 181–200). Springer. https://doi.org/10.1007/0-387-27890-7_11",
+   "year": 2005,
+   "doi": "10.1007/0-387-27890-7_11",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "el Kaliouby, R., Picard, R. W., & Baron-Cohen, S. (2006). Affective computing and autism. Annals of the New York Academy of Sciences, 1093, 228–248. https://doi.org/10.1196/annals.1382.016",
+   "year": 2006,
+   "doi": "10.1196/annals.1382.016",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "European Union. (2016). Regulation (EU) 2016/679 (General Data Protection Regulation). https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+   "year": 2016,
+   "doi": null,
+   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+   "arxiv": null
+  },
+  {
+   "text": "European Union. (2024). Regulation (EU) 2024/1689 (Artificial Intelligence Act). https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+   "year": 2024,
+   "doi": null,
+   "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+   "arxiv": null
+  },
+  {
+   "text": "Fleming, S. M., & Lau, H. C. (2014). How to measure metacognition. Frontiers in Human Neuroscience, 8, 443. https://doi.org/10.3389/fnhum.2014.00443",
+   "year": 2014,
+   "doi": "10.3389/fnhum.2014.00443",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Fleeson, W., & Jayawickreme, E. (2015). Whole Trait Theory. Journal of Research in Personality, 56, 82–92. https://doi.org/10.1016/j.jrp.2014.10.009",
+   "year": 2015,
+   "doi": "10.1016/j.jrp.2014.10.009",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Flavell, J. H. (1979). Metacognition and cognitive monitoring: A new area of cognitive-developmental inquiry. American Psychologist, 34(10), 906–911. https://doi.org/10.1037/0003-066X.34.10.906",
+   "year": 1979,
+   "doi": "10.1037/0003-066X.34.10.906",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11, 127–138. https://doi.org/10.1038/nrn2787 Gebru, T., Morgenstern, J., Vecchione, B., Vaughan, J. W., Wallach, H., Daumé III, H., & Crawford, K. (2021). Datasheets for datasets. Communications of the ACM, 64(12), 86–92. https://doi.org/10.1145/3458723",
+   "year": 2010,
+   "doi": "10.1038/nrn2787",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Gendron, M., Roberson, D., van der Vyver, J. M., & Barrett, L. F. (2014). Perceptions of emotion from facial expressions are not culturally universal: Evidence from a remote culture. Emotion, 14(2), 251–262. https://doi.org/10.1037/a0036052",
+   "year": 2014,
+   "doi": "10.1037/a0036052",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Gollwitzer, P. M. (1999). Implementation intentions: Strong effects of simple plans. American Psychologist, 54(7), 493–503. https://doi.org/10.1037/0003-066X.54.7.493",
+   "year": 1999,
+   "doi": "10.1037/0003-066X.54.7.493",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Greenwald, A. G., McGhee, D. E., & Schwartz, J. L. K. (1998). Measuring individual differences in implicit cognition: The implicit association test. Journal of Personality and Social Psychology, 74(6), 1464–1480. https://doi.org/10.1037/0022-3514.74.6.1464",
+   "year": 1998,
+   "doi": "10.1037/0022-3514.74.6.1464",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Gross, J. J. (1998). The emerging field of emotion regulation: An integrative review. Review of General Psychology, 2(3), 271–299. https://doi.org/10.1037/1089-2680.2.3.271",
+   "year": 1998,
+   "doi": "10.1037/1089-2680.2.3.271",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Gross, J. J. (2015). Emotion regulation: Current status and future prospects. Psychological Inquiry, 26(1), 1–26. https://doi.org/10.1080/1047840X.2014.940781",
+   "year": 2015,
+   "doi": "10.1080/1047840X.2014.940781",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Guo, C., Pleiss, G., Sun, Y., & Weinberger, K. Q. (2017). On calibration of modern neural networks. Proceedings of ICML, 70, 1321–1330. https://proceedings.mlr.press/v70/guo17a.html",
+   "year": 2017,
+   "doi": null,
+   "url": "https://proceedings.mlr.press/v70/guo17a.html",
+   "arxiv": null
+  },
+  {
+   "text": "Hodzic, S., Scharfen, J., Ripoll, P., Holling, H., & Zenasni, F. (2018). How efficient are emotional intelligence trainings: A meta-analysis. Emotion Review, 10(2), 138–148. https://doi.org/10.1177/1754073917708613",
+   "year": 2018,
+   "doi": "10.1177/1754073917708613",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Houben, M., Van Den Noortgate, W., & Kuppens, P. (2015). The relation between short-term emotion dynamics and psychological well-being: A meta-analysis. Psychological Bulletin, 141(4), 901–930. https://doi.org/10.1037/a0038822",
+   "year": 2015,
+   "doi": "10.1037/a0038822",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Huang, J., Chen, X., Mishra, S., Zheng, H. S., Yu, A. W., Song, X., & Zhou, D. (2024). Large language models cannot self-correct reasoning yet. Proceedings of ICLR 2024. https://arxiv.org/abs/2310.01798",
+   "year": 2024,
+   "doi": null,
+   "url": "https://arxiv.org/abs/2310.01798",
+   "arxiv": "2310.01798"
+  },
+  {
+   "text": "Huys, Q. J. M., Maia, T. V., & Frank, M. J. (2016). Computational psychiatry as a bridge from neuroscience to clinical applications. Nature Neuroscience, 19, 404–413. https://doi.org/10.1038/nn.4238",
+   "year": 2016,
+   "doi": "10.1038/nn.4238",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Johnson, M. K., Hashtroudi, S., & Lindsay, D. S. (1993). Source monitoring. Psychological Bulletin, 114(1), 3–28. https://doi.org/10.1037/0033-2909.114.1.3",
+   "year": 1993,
+   "doi": "10.1037/0033-2909.114.1.3",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Joseph, D. L., & Newman, D. A. (2010). Emotional intelligence: An integrative meta-analysis and cascading model. Journal of Applied Psychology, 95(1), 54–78. https://doi.org/10.1037/a0017286",
+   "year": 2010,
+   "doi": "10.1037/a0017286",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Jack, R. E., Garrod, O. G. B., Yu, H., Caldara, R., & Schyns, P. G. (2012). Facial expressions of emotion are not culturally universal. Proceedings of the National Academy of Sciences, 109(19), 7241–7244. https://doi.org/10.1073/pnas.1200155109",
+   "year": 2012,
+   "doi": "10.1073/pnas.1200155109",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Kaelbling, L. P., Littman, M. L., & Cassandra, A. R. (1998). Planning and acting in partially observable stochastic domains. Artificial Intelligence, 101(1–2), 99–134. https://doi.org/10.1016/S0004-3702(98)00023-X",
+   "year": 1998,
+   "doi": "10.1016/S0004-3702(98)00023-X",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Kaye, J., Whitley, E. A., Lund, D., Morrison, M., Teare, H., & Melham, K. (2015). Dynamic consent: A patient interface for twenty-first century research networks. European Journal of Human Genetics, 23, 141–146. https://doi.org/10.1038/ejhg.2014.71",
+   "year": 2015,
+   "doi": "10.1038/ejhg.2014.71",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Kashdan, T. B., Barrett, L. F., & McKnight, P. E. (2015). Unpacking emotion differentiation: Transforming unpleasant experience by perceiving distinctions in negativity. Current Directions in Psychological Science, 24(1), 10–16. https://doi.org/10.1177/0963721414550708",
+   "year": 2015,
+   "doi": "10.1177/0963721414550708",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Knill, D. C., & Pouget, A. (2004). The Bayesian brain: The role of uncertainty in neural coding and computation. Trends in Neurosciences, 27(12), 712–719. https://doi.org/10.1016/j.tins.2004.10.007",
+   "year": 2004,
+   "doi": "10.1016/j.tins.2004.10.007",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Kuppens, P., Allen, N. B., & Sheeber, L. B. (2010). Emotional inertia and psychological maladjustment. Psychological Science, 21(7), 984–991. https://doi.org/10.1177/0956797610372634",
+   "year": 2010,
+   "doi": "10.1177/0956797610372634",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Lee, J. D., & See, K. A. (2004). Trust in automation: Designing for appropriate reliance. Human Factors, 46(1), 50–80. https://doi.org/10.1518/hfes.46.1.50_30392",
+   "year": 2004,
+   "doi": "10.1518/hfes.46.1.50_30392",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Li, M., & Washington, P. (2024). A comparison of personalized and generalized approaches to emotion recognition using consumer wearable devices: Machine learning study. JMIR AI, 3, e52171. https://doi.org/10.2196/52171",
+   "year": 2024,
+   "doi": "10.2196/52171",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Lim, J. Z., Mountstephens, J., & Teo, J. (2020). Emotion recognition using eye-tracking: Taxonomy, review and current challenges. Sensors, 20(8), 2385. https://doi.org/10.3390/s20082385",
+   "year": 2020,
+   "doi": "10.3390/s20082385",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Liu, X., Cruz Rivera, S., Moher, D., Calvert, M. J., & Denniston, A. K. (2020). Reporting guidelines for clinical trial reports for interventions involving artificial intelligence: The CONSORT-AI extension. BMJ, 370, m3164. https://doi.org/10.1136/bmj.m3164",
+   "year": 2020,
+   "doi": "10.1136/bmj.m3164",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "MacKay, D. J. C. (1992). Information-based objective functions for active data selection. Neural Computation, 4(4), 590–604. https://doi.org/10.1162/neco.1992.4.4.590 Madaan, A., Tandon, N., Gupta, P., Hallinan, S., Gao, L., Wiegreffe, S., Alon, U., Dziri, N., Prabhumoye, S., Yang, Y., Welleck, S., Majumder, B. P., Gupta, S., Yazdanbakhsh, A., & Clark, P. (2023). Self-Refine: Iterative refinement with self-feedback. Advances in Neural Information Processing Systems, 36. https://proceedings.neurips.cc/paper_files/paper/2023/hash/91edff07232f b1b55a505a9e9f6c0ff3-Abstract-Conference.html",
+   "year": 1992,
+   "doi": "10.1162/neco.1992.4.4.590",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "MacCann, C., Jiang, Y., Brown, L. E. R., Double, K. S., Bucich, M., & Minbashian, A. (2020). Emotional intelligence predicts academic performance: A meta-analysis. Psychological Bulletin, 146(2), 150–186. https://doi.org/10.1037/bul0000219",
+   "year": 2020,
+   "doi": "10.1037/bul0000219",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Maniscalco, B., & Lau, H. (2012). A signal detection theoretic approach for estimating metacognitive sensitivity from confidence ratings. Consciousness and Cognition, 21(1), 422–430. https://doi.org/10.1016/j.concog.2011.09.021",
+   "year": 2012,
+   "doi": "10.1016/j.concog.2011.09.021",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Mayer, J. D., Salovey, P., Caruso, D. R., & Sitarenios, G. (2001). Emotional intelligence as a standard intelligence. Emotion, 1(3), 232–242. https://doi.org/10.1037/1528-3542.1.3.232",
+   "year": 2001,
+   "doi": "10.1037/1528-3542.1.3.232",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Mayer, J. D., Salovey, P., Caruso, D. R., & Sitarenios, G. (2003). Measuring emotional intelligence with the MSCEIT V2.0. Emotion, 3(1), 97–105. https://doi.org/10.1037/1528-3542.3.1.97",
+   "year": 2003,
+   "doi": "10.1037/1528-3542.3.1.97",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Mayer, J. D., Salovey, P., & Caruso, D. R. (2004). Emotional intelligence: Theory, findings, and implications. Psychological Inquiry, 15(3), 197–215. https://doi.org/10.1207/S15327965PLI1503_02",
+   "year": 2004,
+   "doi": "10.1207/S15327965PLI1503_02",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Mayer, J. D., Roberts, R. D., & Barsade, S. G. (2008). Human abilities: Emotional intelligence. Annual Review of Psychology, 59, 507–536. https://doi.org/10.1146/annurev.psych.59.103006.093646",
+   "year": 2008,
+   "doi": "10.1146/annurev.psych.59.103006.093646",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Mayer, J. D., Caruso, D. R., & Salovey, P. (2016). The ability model of emotional intelligence: Principles and updates. Emotion Review, 8(4), 290–300. https://doi.org/10.1177/1754073916639667",
+   "year": 2016,
+   "doi": "10.1177/1754073916639667",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "McDuff, D., el Kaliouby, R., Sénéchal, T., Amr, M., Cohn, J. F., & Picard, R. W. (2013). Affectiva–MIT Facial Expression Dataset (AM-FED): Naturalistic and spontaneous facial expressions collected “in the wild.” Proceedings of the IEEE CVPR Workshops, 881–888. https://doi.org/10.1109/CVPRW.2013.130",
+   "year": 2013,
+   "doi": "10.1109/CVPRW.2013.130",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "McDuff, D., Mahmoud, A., Mavadati, M., Amr, M., Turcot, J., & el Kaliouby, R. (2016). AFFDEX SDK: A cross-platform real-time multi-face expression recognition toolkit. Proceedings of CHI EA 2016. https://doi.org/10.1145/2851581.2890247",
+   "year": 2016,
+   "doi": "10.1145/2851581.2890247",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Messick, S. (1995). Validity of psychological assessment: Validation of inferences from persons' responses and performances as scientific inquiry into score meaning. American Psychologist, 50(9), 741–749. https://doi.org/10.1037/0003-066X.50.9.741",
+   "year": 1995,
+   "doi": "10.1037/0003-066X.50.9.741",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Miller, T. (2019). Explanation in artificial intelligence: Insights from the social sciences. Artificial Intelligence, 267, 1–38. https://doi.org/10.1016/j.artint.2018.07.007 Mitchell, M., Wu, S., Zaldivar, A., Barnes, P., Vasserman, L., Hutchinson, B., Spitzer, E., Raji, I. D., & Gebru, T. (2019). Model cards for model reporting. Proceedings of FAT 2019*, 220–229. https://doi.org/10.1145/3287560.3287596",
+   "year": 2019,
+   "doi": "10.1016/j.artint.2018.07.007",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Mischel, W., & Shoda, Y. (1995). A cognitive-affective system theory of personality: Reconceptualizing situations, dispositions, dynamics, and invariance in personality structure. Psychological Review, 102(2), 246–268. https://doi.org/10.1037/0033-295X.102.2.246",
+   "year": 1995,
+   "doi": "10.1037/0033-295X.102.2.246",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Molenaar, P. C. M. (2004). A manifesto on psychology as idiographic science: Bringing the person back into scientific psychology, this time forever. Measurement: Interdisciplinary Research and Perspectives, 2(4), 201–218. https://doi.org/10.1207/s15366359mea0204_1",
+   "year": 2004,
+   "doi": "10.1207/s15366359mea0204_1",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Mollahosseini, A., Hasani, B., & Mahoor, M. H. (2019). AffectNet: A database for facial expression, valence, and arousal computing in the wild. IEEE Transactions on Affective Computing, 10(1), 18–31. https://doi.org/10.1109/TAFFC.2017.2740923",
+   "year": 2019,
+   "doi": "10.1109/TAFFC.2017.2740923",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Montague, P. R., Dolan, R. J., Friston, K. J., & Dayan, P. (2012). Computational psychiatry. Trends in Cognitive Sciences, 16(1), 72–80. https://doi.org/10.1016/j.tics.2011.11.018",
+   "year": 2012,
+   "doi": "10.1016/j.tics.2011.11.018",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Moors, A., Ellsworth, P. C., Scherer, K. R., & Frijda, N. H. (2013). Appraisal theories of emotion: State of the art and future development. Emotion Review, 5(2), 119–124. https://doi.org/10.1177/1754073912468165",
+   "year": 2013,
+   "doi": "10.1177/1754073912468165",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Nagamachi, M. (1995). Kansei Engineering: A new ergonomic consumer-oriented technology for product development. International Journal of Industrial Ergonomics, 15(1), 3–11. https://doi.org/10.1016/0169-8141(94)00052-5",
+   "year": 1995,
+   "doi": "10.1016/0169-8141(94)00052-5",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Nelson, T. O., & Narens, L. (1990). Metamemory: A theoretical framework and new findings. Psychology of Learning and Motivation, 26, 125–173. https://doi.org/10.1016/S0079-7421(08)60053-5",
+   "year": 1990,
+   "doi": "10.1016/S0079-7421(08)60053-5",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "NIST. (2020). NIST Privacy Framework: A tool for improving privacy through enterprise risk management, version 1.0. National Institute of Standards and Technology. https://doi.org/10.6028/NIST.CSWP.01162020",
+   "year": 2020,
+   "doi": "10.6028/NIST.CSWP.01162020",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "NIST. (2023). Artificial Intelligence Risk Management Framework (AI RMF 1.0). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.AI.100-1",
+   "year": 2023,
+   "doi": "10.6028/NIST.AI.100-1",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Nixon, J., Dusenberry, M. W., Zhang, L., Jerfel, G., & Tran, D. (2019). Measuring calibration in deep learning. CVPR Workshops. https://arxiv.org/abs/1904.01685",
+   "year": 2019,
+   "doi": null,
+   "url": "https://arxiv.org/abs/1904.01685",
+   "arxiv": "1904.01685"
+  },
+  {
+   "text": "Onnela, J.-P., & Rauch, S. L. (2016). Harnessing smartphone-based digital phenotyping to enhance behavioral and mental health. Neuropsychopharmacology, 41, 1691–1696. https://doi.org/10.1038/npp.2016.7",
+   "year": 2016,
+   "doi": "10.1038/npp.2016.7",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "O'Boyle, E. H., Jr., Humphrey, R. H., Pollack, J. M., Hawver, T. H., & Story, P. A. (2011). The relation between emotional intelligence and job performance: A meta-analysis. Journal of Organizational Behavior, 32(5), 788–818. https://doi.org/10.1002/job.714",
+   "year": 2011,
+   "doi": "10.1002/job.714",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Oswald, F. L., Mitchell, G., Blanton, H., Jaccard, J., & Tetlock, P. E. (2013). Predicting ethnic and racial discrimination: A meta-analysis of IAT criterion studies. Journal of Personality and Social Psychology, 105(2), 171–192. https://doi.org/10.1037/a0032734 Ovadia, Y., Fertig, E., Ren, J., Nado, Z., Sculley, D., Nowozin, S., Dillon, J., Lakshminarayanan, B., & Snoek, J. (2019). Can you trust your model's uncertainty? Evaluating predictive uncertainty under dataset shift. Advances in Neural Information Processing Systems, 32. https://proceedings.n eurips.cc/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html",
+   "year": 2013,
+   "doi": "10.1037/a0032734",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Pearl, J. (2009). Causality: Models, reasoning, and inference (2nd ed.). Cambridge University Press.",
+   "year": 2009,
+   "doi": null,
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Pekrun, R. (2006). The control-value theory of achievement emotions: Assumptions, corollaries, and implications for educational research and practice. Educational Psychology Review, 18, 315–341. https://doi.org/10.1007/s10648-006-9029-9",
+   "year": 2006,
+   "doi": "10.1007/s10648-006-9029-9",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Pekrun, R. (2024). Control-value theory: From achievement emotion to a general theory of human emotions. Educational Psychology Review, 36, 83. https://doi.org/10.1007/s10648-024-09909-7",
+   "year": 2024,
+   "doi": "10.1007/s10648-024-09909-7",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Petrides, K. V., Pita, R., & Kokkinaki, F. (2007). The location of trait emotional intelligence in personality factor space. British Journal of Psychology, 98(2), 273–289. https://doi.org/10.1348/000712606X120618",
+   "year": 2007,
+   "doi": "10.1348/000712606X120618",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Picard, R. W. (1997). Affective computing. MIT Press.",
+   "year": 1997,
+   "doi": null,
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Popper, K. (1959). The logic of scientific discovery. Hutchinson.",
+   "year": 1959,
+   "doi": null,
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Robinson, W. S. (1950). Ecological correlations and the behavior of individuals. American Sociological Review, 15(3), 351–357. https://doi.org/10.2307/2087176",
+   "year": 1950,
+   "doi": "10.2307/2087176",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Rudin, C. (2019). Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead. Nature Machine Intelligence, 1, 206–215. https://doi.org/10.1038/s42256-019-0048-x",
+   "year": 2019,
+   "doi": "10.1038/s42256-019-0048-x",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Russell, J. A. (1980). A circumplex model of affect. Journal of Personality and Social Psychology, 39(6), 1161–1178. https://doi.org/10.1037/h0077714",
+   "year": 1980,
+   "doi": "10.1037/h0077714",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Salovey, P., & Mayer, J. D. (1990). Emotional intelligence. Imagination, Cognition and Personality, 9(3), 185–211. https://doi.org/10.2190/DUGG-P24E-52WK-6CDG",
+   "year": 1990,
+   "doi": "10.2190/DUGG-P24E-52WK-6CDG",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Schacter, D. L. (1999). The seven sins of memory: Insights from psychology and cognitive neuroscience. American Psychologist, 54(3), 182–203. https://doi.org/10.1037/0003-066X.54.3.182",
+   "year": 1999,
+   "doi": "10.1037/0003-066X.54.3.182",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Scherer, K. R. (2009). The dynamic architecture of emotion: Evidence for the component process model. Cognition and Emotion, 23(7), 1307–1351. https://doi.org/10.1080/02699930902928969",
+   "year": 2009,
+   "doi": "10.1080/02699930902928969",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Schmidt, P., Reiss, A., Dürichen, R., Marberger, C., & Van Laerhoven, K. (2018). Introducing WESAD, a multimodal dataset for wearable stress and affect detection. Proceedings of ICMI 2018, 400–408. https://doi.org/10.1145/3242969.3242985 Schölkopf, B., Locatello, F., Bauer, S., Ke, N. R., Kalchbrenner, N., Goyal, A., & Bengio, Y. (2021). Toward causal representation learning. Proceedings of the IEEE, 109(5), 612–634. https://doi.org/10.1109/JPROC.2021.3058954 Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., Chaudhary, V., Young, M., Crespo, J.-F., & Dennison, D. (2015). Hidden technical debt in machine learning systems. Advances in Neural Information Processing Systems, 28.",
+   "year": 2018,
+   "doi": "10.1145/3242969.3242985",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Settles, B. (2009). Active learning literature survey. University of Wisconsin–Madison Computer Sciences Technical Report 1648.",
+   "year": 2009,
+   "doi": null,
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Shadish, W. R., Cook, T. D., & Campbell, D. T. (2002). Experimental and quasi-experimental designs for generalized causal inference. Houghton Mifflin.",
+   "year": 2002,
+   "doi": null,
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Shannon, C. E. (1948). A mathematical theory of communication. Bell System Technical Journal, 27, 379–423, 623–656. https://doi.org/10.1002/j.1538-7305.1948.tb01338.x",
+   "year": 1948,
+   "doi": "10.1002/j.1538-7305.1948.tb01338.x",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Shiffman, S., Stone, A. A., & Hufford, M. R. (2008). Ecological momentary assessment. Annual Review of Clinical Psychology, 4, 1–32. https://doi.org/10.1146/annurev.clinpsy.3.022806.091415",
+   "year": 2008,
+   "doi": "10.1146/annurev.clinpsy.3.022806.091415",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Shinn, N., Cassano, F., Gopinath, A., Narasimhan, K., & Yao, S. (2023). Reflexion: Language agents with verbal reinforcement learning. Advances in Neural Information Processing Systems, 36. https://proceedings.neurips.cc/paper_files/paper/2023/hash/1b44b878bb782e6954cd88862851 0e90-Abstract-Conference.html",
+   "year": 2023,
+   "doi": null,
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/1b44b878bb782e6954cd88862851",
+   "arxiv": null
+  },
+  {
+   "text": "Shneiderman, B. (2020). Human-centered artificial intelligence: Reliable, safe & trustworthy. International Journal of Human–Computer Interaction, 36(6), 495–504. https://doi.org/10.1080/10447318.2020.1741118",
+   "year": 2020,
+   "doi": "10.1080/10447318.2020.1741118",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Simon, H. A. (1955). A behavioral model of rational choice. Quarterly Journal of Economics, 69(1), 99–118. https://doi.org/10.2307/1884852",
+   "year": 1955,
+   "doi": "10.2307/1884852",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Squire, L. R. (2004). Memory systems of the brain: A brief history and current perspective. Neurobiology of Learning and Memory, 82(3), 171–177. https://doi.org/10.1016/j.nlm.2004.06.005",
+   "year": 2004,
+   "doi": "10.1016/j.nlm.2004.06.005",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Squire, L. R., & Wixted, J. T. (2011). The cognitive neuroscience of human memory since H.M. Annual Review of Neuroscience, 34, 259–288. https://doi.org/10.1146/annurev-neuro-061010-113720",
+   "year": 2011,
+   "doi": "10.1146/annurev-neuro-061010-113720",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Sutton, R. S., & Barto, A. G. (2018). Reinforcement learning: An introduction (2nd ed.). MIT Press.",
+   "year": 2018,
+   "doi": null,
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "Vasey, B., Nagendran, M., Campbell, B., Clifton, D. A., Collins, G. S., Denaxas, S., et al. (2022). Reporting guideline for the early-stage clinical evaluation of decision support systems driven by artificial intelligence: DECIDE-AI. Nature Medicine, 28, 924–933. https://doi.org/10.1038/s41591-022-01772-9",
+   "year": 2022,
+   "doi": "10.1038/s41591-022-01772-9",
+   "url": null,
+   "arxiv": null
+  },
+  {
+   "text": "W3C. (2013). PROV-O: The PROV ontology. W3C Recommendation. https://www.w3.org/TR/prov-o/",
+   "year": 2013,
+   "doi": null,
+   "url": "https://www.w3.org/TR/prov-o/",
+   "arxiv": null
+  },
+  {
+   "text": "World Health Organization. (2021). Ethics and governance of artificial intelligence for health: WHO guidance. ISBN 978-92-4-002920-0. https://www.who.int/publications/i/item/9789240029200",
+   "year": 2021,
+   "doi": null,
+   "url": "https://www.who.int/publications/i/item/9789240029200",
+   "arxiv": null
+  },
+  {
+   "text": "Zadeh, A. B., Liang, P. P., Poria, S., Cambria, E., & Morency, L.-P. (2018). Multimodal language analysis in the wild: CMU-MOSEI dataset and interpretable dynamic fusion graph. Proceedings of ACL 2018, 2236–2246. https://doi.org/10.18653/v1/P18-1208",
+   "year": 2018,
+   "doi": "10.18653/v1/P18-1208",
+   "url": null,
+   "arxiv": null
+  }
+ ],
+ "manuscript_references_verified_session_14": [
+  {
+   "paper": "P1",
+   "n": 1,
+   "entry": "C. E. Alchourrón, P. Gärdenfors, and D. Makinson. \"On the logic of theory change: Partial meet contraction and revision functions.\" *Journal of Symbolic Logic*, 50(2):510–530, 1985. DOI: 10.2307/2274239",
+   "identifier": "DOI: 10.2307/2274239",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 2,
+   "entry": "B. Jacobs. \"Commutativity of probabilistic belief revision.\" *Frontiers in Cognition*, 2025. DOI: 10.3389/fcogn.2025.1623227",
+   "identifier": "DOI: 10.3389/fcogn.2025.1623227",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 3,
+   "entry": "S. L. Vasileiou et al. \"How Do People Revise Inconsistent Beliefs? Examining Belief Revision in Humans with User Studies.\" arXiv:2506.09977, 2025.",
+   "identifier": "arXiv:2506.09977",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 4,
+   "entry": "S. L. Vasileiou and W. Yeoh. \"Human-Aware Belief Revision: A Cognitively Inspired Framework for Explanation-Guided Revision of Human Models.\" arXiv:2405.19238, 2024.",
+   "identifier": "arXiv:2405.19238",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 5,
+   "entry": "U. Schäfer et al. \"'The AI is uncertain, so am I. What now?': Navigating Shortcomings of Uncertainty Representations in Human-AI Collaboration with Capability-focused Guidance.\" *Proc. ACM Hum.-Comput. Interact.*, 2025. DOI: 10.1145/3757451",
+   "identifier": "DOI: 10.1145/3757451",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 6,
+   "entry": "R. Rosenbacke, Å. Melhus, et al. \"How Explainable AI Can Increase or Decrease Clinicians' Trust in AI Applications in Health Care: Systematic Review.\" *JMIR AI*, 1:e53207, 2024. PMID: 39476365",
+   "identifier": "PMID: 39476365",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 7,
+   "entry": "A. Didolkar, N. Ballas, S. Arora, and A. Goyal. \"Metacognitive Reuse: Turning Recurring LLM Reasoning Into Concise Behaviors.\" arXiv:2509.13237, 2025.",
+   "identifier": "arXiv:2509.13237",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 8,
+   "entry": "Xin et al. \"MetaMem: Evolving Meta-Memory for Knowledge Utilization through Self-Reflective Symbolic Optimization.\" *Findings of ACL 2026*. arXiv:2602.11182",
+   "identifier": "arXiv:2602.11182",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 9,
+   "entry": "A. P. Elenjical, V. H. Kavuri, and V. Varma. \"Think2: Grounded Metacognitive Reasoning in Large Language Models.\" arXiv:2602.18806, 2026.",
+   "identifier": "arXiv:2602.18806",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 10,
+   "entry": "F. Doshi-Velez and B. Kim. \"Towards a Rigorous Science of Interpretable Machine Learning.\" arXiv:1702.08608, 2017.",
+   "identifier": "arXiv:1702.08608",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 11,
+   "entry": "T. Miller. \"Explanation in artificial intelligence: Insights from the social sciences.\" *Artificial Intelligence*, 267:1–38, 2019. DOI: 10.1016/j.artint.2018.07.007",
+   "identifier": "DOI: 10.1016/j.artint.2018.07.007",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 12,
+   "entry": "C. Rudin. \"Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead.\" *Nature Machine Intelligence*, 1:206–215, 2019. DOI: 10.1038/s42256-019-0048-x",
+   "identifier": "DOI: 10.1038/s42256-019-0048-x",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 13,
+   "entry": "Z. C. Lipton. \"The mythos of model interpretability.\" *Communications of the ACM*, 61(10):36–43, 2018. DOI: 10.1145/3233231. (Preprint: arXiv:1606.03490, 2016.)",
+   "identifier": "DOI: 10.1145/3233231.",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 14,
+   "entry": "D. E. Perry and A. L. Wolf. \"Foundations for the study of software architecture.\" *ACM SIGSOFT Software Engineering Notes*, 17(4):40–52, 1992. DOI: 10.1145/141874.141884",
+   "identifier": "DOI: 10.1145/141874.141884",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 15,
+   "entry": "G. C. Murphy, D. Notkin, and K. J. Sullivan. \"Software reflexion models: bridging the gap between design and implementation.\" *IEEE Transactions on Software Engineering*, 27(4):364–380, 2001. DOI: 10.1109/32.917525",
+   "identifier": "DOI: 10.1109/32.917525",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 16,
+   "entry": "R. Terra and M. T. Valente. \"A dependency constraint language to manage object-oriented software architectures.\" *Software: Practice and Experience*, 39(12):1073–1094, 2009. DOI: 10.1002/spe.931",
+   "identifier": "DOI: 10.1002/spe.931",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 17,
+   "entry": "J. Knodel and D. Popescu. \"A Comparison of Static Architecture Compliance Checking Approaches.\" *Working IEEE/IFIP Conference on Software Architecture (WICSA'07)*, 2007. DOI: 10.1109/WICSA.2007.1",
+   "identifier": "DOI: 10.1109/WICSA.2007.1",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 18,
+   "entry": "L. Passos, R. Terra, M. T. Valente, R. Diniz, and N. das Chagas Mendonça. \"Static Architecture-Conformance Checking: An Illustrative Overview.\" *IEEE Software*, 27(5):82–89, 2010. DOI: 10.1109/MS.2009.117",
+   "identifier": "DOI: 10.1109/MS.2009.117",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 19,
+   "entry": "S. Ducasse and D. Pollet. \"Software Architecture Reconstruction: A Process-Oriented Taxonomy.\" *IEEE Transactions on Software Engineering*, 35(4):573–591, 2009. DOI: 10.1109/TSE.2009.19",
+   "identifier": "DOI: 10.1109/TSE.2009.19",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 20,
+   "entry": "B. Meyer. \"Applying 'design by contract'.\" *Computer*, 25(10):40–51, 1992. DOI: 10.1109/2.161279",
+   "identifier": "DOI: 10.1109/2.161279",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 21,
+   "entry": "L. Lamport. \"The temporal logic of actions.\" *ACM Transactions on Programming Languages and Systems*, 16(3):872–923, 1994. DOI: 10.1145/177492.177726",
+   "identifier": "DOI: 10.1145/177492.177726",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 22,
+   "entry": "D. Jackson. \"Alloy: a lightweight object modelling notation.\" *ACM Transactions on Software Engineering and Methodology*, 11(2):256–290, 2002. DOI: 10.1145/505145.505149",
+   "identifier": "DOI: 10.1145/505145.505149",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 23,
+   "entry": "M. Leucker and C. Schallhart. \"A brief account of runtime verification.\" *The Journal of Logic and Algebraic Programming*, 78(5):293–303, 2009. DOI: 10.1016/j.jlap.2008.08.004",
+   "identifier": "DOI: 10.1016/j.jlap.2008.08.004",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 24,
+   "entry": "K. Claessen and J. Hughes. \"QuickCheck: a lightweight tool for random testing of Haskell programs.\" *Proc. Fifth ACM SIGPLAN International Conference on Functional Programming (ICFP '00)*, pp. 268–279, 2000. DOI: 10.1145/351240.351266",
+   "identifier": "DOI: 10.1145/351240.351266",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 25,
+   "entry": "L. Moreau and P. Missier (eds.). \"PROV-DM: The PROV Data Model.\" W3C Recommendation, 30 April 2013. https://www.w3.org/TR/2013/REC-prov-dm-20130430/",
+   "identifier": "https://www.w3.org/TR/2013/REC-prov-dm-20130430/",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 26,
+   "entry": "P. Groth and L. Moreau (eds.). \"PROV-Overview: An Overview of the PROV Family of Documents.\" W3C Working Group Note, 30 April 2013. https://www.w3.org/TR/2013/NOTE-prov-overview-20130430/",
+   "identifier": "https://www.w3.org/TR/2013/NOTE-prov-overview-20130430/",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 27,
+   "entry": "P. Buneman, S. Khanna, and W.-C. Tan. \"Why and Where: A Characterization of Data Provenance.\" *Database Theory — ICDT 2001*, LNCS, pp. 316–330, 2001. DOI: 10.1007/3-540-44503-X_20",
+   "identifier": "DOI: 10.1007/3-540-44503-X_20",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 28,
+   "entry": "J. Cheney, L. Chiticariu, and W.-C. Tan. \"Provenance in Databases: Why, How, and Where.\" *Foundations and Trends in Databases*, 1(4):379–474, 2009. DOI: 10.1561/1900000006",
+   "identifier": "DOI: 10.1561/1900000006",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 29,
+   "entry": "A. Darwiche and J. Pearl. \"On the logic of iterated belief revision.\" *Artificial Intelligence*, 89(1–2):1–29, 1997. DOI: 10.1016/S0004-3702(96)00038-0",
+   "identifier": "DOI: 10.1016/S0004-3702(96)00038-0",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 30,
+   "entry": "P. Gärdenfors. *Knowledge in Flux: Modeling the Dynamics of Epistemic States*. MIT Press, 1988. ISBN 9780262071093",
+   "identifier": "ISBN 9780262071093",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 31,
+   "entry": "W. Spohn. \"Ordinal Conditional Functions: A Dynamic Theory of Epistemic States.\" In W. L. Harper and B. Skyrms (eds.), *Causation in Decision, Belief Change, and Statistics*, vol. II, pp. 105–134. Kluwer, 1988. DOI: 10.1007/978-94-009-2865-7_6",
+   "identifier": "DOI: 10.1007/978-94-009-2865-7_6",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 32,
+   "entry": "R. C. Jeffrey. *The Logic of Decision*, 2nd ed. University of Chicago Press, 1983. ISBN 9780226395821. (1st ed., McGraw-Hill, 1965.)",
+   "identifier": "ISBN 9780226395821.",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 33,
+   "entry": "J. Pearl. *Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference*. Morgan Kaufmann, 1988. ISBN 9781558604797",
+   "identifier": "ISBN 9781558604797",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 34,
+   "entry": "D. V. Lindley. \"On a Measure of the Information Provided by an Experiment.\" *The Annals of Mathematical Statistics*, 27(4):986–1005, 1956. DOI: 10.1214/aoms/1177728069",
+   "identifier": "DOI: 10.1214/aoms/1177728069",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 35,
+   "entry": "K. Chaloner and I. Verdinelli. \"Bayesian Experimental Design: A Review.\" *Statistical Science*, 10(3):273–304, 1995. DOI: 10.1214/ss/1177009939",
+   "identifier": "DOI: 10.1214/ss/1177009939",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 36,
+   "entry": "D. J. C. MacKay. \"Information-Based Objective Functions for Active Data Selection.\" *Neural Computation*, 4(4):590–604, 1992. DOI: 10.1162/neco.1992.4.4.590",
+   "identifier": "DOI: 10.1162/neco.1992.4.4.590",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 37,
+   "entry": "N. Houlsby, F. Huszár, Z. Ghahramani, and M. Lengyel. \"Bayesian Active Learning for Classification and Preference Learning.\" arXiv:1112.5745, 2011.",
+   "identifier": "arXiv:1112.5745",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 38,
+   "entry": "B. Settles. \"Active Learning Literature Survey.\" Computer Sciences Technical Report 1648, University of Wisconsin–Madison, 2009. http://digital.library.wisc.edu/1793/60660",
+   "identifier": "http://digital.library.wisc.edu/1793/60660",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 39,
+   "entry": "M. Oaksford and N. Chater. \"A rational analysis of the selection task as optimal data selection.\" *Psychological Review*, 101(4):608–631, 1994. DOI: 10.1037/0033-295X.101.4.608",
+   "identifier": "DOI: 10.1037/0033-295X.101.4.608",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 40,
+   "entry": "J. D. Nelson. \"Finding Useful Questions: On Bayesian Diagnosticity, Probability, Impact, and Information Gain.\" *Psychological Review*, 112(4):979–999, 2005. DOI: 10.1037/0033-295X.112.4.979",
+   "identifier": "DOI: 10.1037/0033-295X.112.4.979",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 41,
+   "entry": "P. Sengers, K. Boehner, S. David, and J. Kaye. \"Reflective design.\" *Proc. 4th Decennial Conference on Critical Computing (CC '05)*, pp. 49–58, 2005. DOI: 10.1145/1094562.1094569",
+   "identifier": "DOI: 10.1145/1094562.1094569",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 42,
+   "entry": "E. P. S. Baumer. \"Reflective Informatics: Conceptual Dimensions for Designing Technologies of Reflection.\" *Proc. CHI 2015*, pp. 585–594. DOI: 10.1145/2702123.2702234",
+   "identifier": "DOI: 10.1145/2702123.2702234",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 43,
+   "entry": "R. Fleck and G. Fitzpatrick. \"Reflecting on reflection: framing a design landscape.\" *Proc. OZCHI 2010*, pp. 216–223. DOI: 10.1145/1952222.1952269",
+   "identifier": "DOI: 10.1145/1952222.1952269",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 44,
+   "entry": "I. Li, A. K. Dey, and J. Forlizzi. \"A stage-based model of personal informatics systems.\" *Proc. CHI 2010*, pp. 557–566. DOI: 10.1145/1753326.1753409",
+   "identifier": "DOI: 10.1145/1753326.1753409",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 45,
+   "entry": "D. A. Epstein, A. Ping, J. Fogarty, and S. A. Munson. \"A lived informatics model of personal informatics.\" *Proc. UbiComp 2015*, pp. 731–742. DOI: 10.1145/2750858.2804250",
+   "identifier": "DOI: 10.1145/2750858.2804250",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 46,
+   "entry": "A. Rapp and F. Cena. \"Personal informatics for everyday life: How users without prior self-tracking experience engage with personal data.\" *International Journal of Human-Computer Studies*, 94:1–17, 2016. DOI: 10.1016/j.ijhcs.2016.05.006",
+   "identifier": "DOI: 10.1016/j.ijhcs.2016.05.006",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 47,
+   "entry": "S. Bull and J. Kay. \"Open Learner Models.\" In *Advances in Intelligent Tutoring Systems*, Studies in Computational Intelligence vol. 308, pp. 301–322. Springer, 2010. DOI: 10.1007/978-3-642-14363-2_15",
+   "identifier": "DOI: 10.1007/978-3-642-14363-2_15",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 48,
+   "entry": "J. Kay. \"Scrutable Adaptation: Because We Can and Must.\" *Adaptive Hypermedia and Adaptive Web-Based Systems (AH 2006)*, LNCS 4018, pp. 11–19. DOI: 10.1007/11768012_2",
+   "identifier": "DOI: 10.1007/11768012_2",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 49,
+   "entry": "V. Bellotti and K. Edwards. \"Intelligibility and Accountability: Human Considerations in Context-Aware Systems.\" *Human-Computer Interaction*, 16(2–4):193–212, 2001. DOI: 10.1207/S15327051HCI16234_05",
+   "identifier": "DOI: 10.1207/S15327051HCI16234_05",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 50,
+   "entry": "B. Y. Lim and A. K. Dey. \"Assessing demand for intelligibility in context-aware applications.\" *Proc. UbiComp 2009*, pp. 195–204. DOI: 10.1145/1620545.1620576",
+   "identifier": "DOI: 10.1145/1620545.1620576",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 51,
+   "entry": "E. Horvitz. \"Principles of mixed-initiative user interfaces.\" *Proc. CHI 1999*, pp. 159–166. DOI: 10.1145/302979.303030",
+   "identifier": "DOI: 10.1145/302979.303030",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 52,
+   "entry": "G. Bansal, T. Wu, J. Zhou, R. Fok, B. Nushi, E. Kamar, M. T. Ribeiro, and D. S. Weld. \"Does the Whole Exceed its Parts? The Effect of AI Explanations on Complementary Team Performance.\" *Proc. CHI 2021*, article 81. DOI: 10.1145/3411764.3445717",
+   "identifier": "DOI: 10.1145/3411764.3445717",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 53,
+   "entry": "S. Amershi, D. Weld, M. Vorvoreanu, A. Fourney, B. Nushi, P. Collisson, J. Suh, S. Iqbal, P. N. Bennett, K. Inkpen, J. Teevan, R. Kikin-Gil, and E. Horvitz. \"Guidelines for Human-AI Interaction.\" *Proc. CHI 2019*, paper 3. DOI: 10.1145/3290605.3300233",
+   "identifier": "DOI: 10.1145/3290605.3300233",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 54,
+   "entry": "J. A. Hanley and A. Lippman-Hand. \"If Nothing Goes Wrong, Is Everything All Right? Interpreting Zero Numerators.\" *JAMA*, 249(13):1743–1745, 1983. DOI: 10.1001/jama.1983.03330370053031",
+   "identifier": "DOI: 10.1001/jama.1983.03330370053031",
+   "verified": true
+  },
+  {
+   "paper": "P1",
+   "n": 55,
+   "entry": "B. Efron and R. J. Tibshirani. *An Introduction to the Bootstrap*. Chapman & Hall, 1993. ISBN 9780412042317 ---",
+   "identifier": "ISBN 9780412042317",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 1,
+   "entry": "U. Schäfer et al. \"'The AI is uncertain, so am I. What now?': Navigating Shortcomings of Uncertainty Representations in Human-AI Collaboration with Capability-focused Guidance.\" *Proc. ACM Hum.-Comput. Interact.*, 2025. DOI: 10.1145/3757451",
+   "identifier": "DOI: 10.1145/3757451",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 2,
+   "entry": "R. Rosenbacke, Å. Melhus, et al. \"How Explainable Artificial Intelligence Can Increase or Decrease Clinicians' Trust in AI Applications in Health Care: Systematic Review.\" *JMIR AI*, 1:e53207, 2024. PMID: 39476365",
+   "identifier": "PMID: 39476365",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 3,
+   "entry": "B. Jacobs. \"Commutativity of probabilistic belief revision.\" *Frontiers in Cognition*, 2025. DOI: 10.3389/fcogn.2025.1623227",
+   "identifier": "DOI: 10.3389/fcogn.2025.1623227",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 4,
+   "entry": "S. L. Vasileiou et al. \"How Do People Revise Inconsistent Beliefs? Examining Belief Revision in Humans with User Studies.\" arXiv:2506.09977, 2025.",
+   "identifier": "arXiv:2506.09977",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 5,
+   "entry": "S. L. Vasileiou and W. Yeoh. \"Human-Aware Belief Revision: A Cognitively Inspired Framework for Explanation-Guided Revision of Human Models.\" arXiv:2405.19238, 2024.",
+   "identifier": "arXiv:2405.19238",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 6,
+   "entry": "L. F. Barrett, R. Adolphs, S. Marsella, A. M. Martinez, and S. D. Pollak. \"Emotional expressions reconsidered: Challenges to inferring emotion from human facial movements.\" *Psychological Science in the Public Interest*, 20(1):1–68, 2019. DOI: 10.1177/1529100619832930",
+   "identifier": "DOI: 10.1177/1529100619832930",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 7,
+   "entry": "M. Gendron, D. Roberson, J. M. van der Vyver, and L. F. Barrett. \"Perceptions of emotion from facial expressions are not culturally universal.\" *Emotion*, 14(2):251–262, 2014. DOI: 10.1037/a0036052",
+   "identifier": "DOI: 10.1037/a0036052",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 8,
+   "entry": "R. A. Calvo and S. D'Mello. \"Affect detection: An interdisciplinary review of models, methods, and their applications.\" *IEEE Transactions on Affective Computing*, 1(1):18–37, 2010. DOI: 10.1109/T-AFFC.2010.1",
+   "identifier": "DOI: 10.1109/T-AFFC.2010.1",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 9,
+   "entry": "A. Didolkar, N. Ballas, S. Arora, and A. Goyal. \"Metacognitive Reuse: Turning Recurring LLM Reasoning Into Concise Behaviors.\" arXiv:2509.13237, 2025.",
+   "identifier": "arXiv:2509.13237",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 10,
+   "entry": "Xin et al. \"MetaMem: Evolving Meta-Memory for Knowledge Utilization through Self-Reflective Symbolic Optimization.\" *Findings of ACL 2026*. arXiv:2602.11182",
+   "identifier": "arXiv:2602.11182",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 11,
+   "entry": "A. P. Elenjical, V. H. Kavuri, and V. Varma. \"Think2: Grounded Metacognitive Reasoning in Large Language Models.\" arXiv:2602.18806, 2026.",
+   "identifier": "arXiv:2602.18806",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 12,
+   "entry": "I. Budin-Ljøsne et al. \"Dynamic consent: A potential solution to some of the challenges of modern biomedical research.\" *BMC Medical Ethics*, 18:4, 2017. DOI: 10.1186/s12910-016-0162-9",
+   "identifier": "DOI: 10.1186/s12910-016-0162-9",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 13,
+   "entry": "Regulation (EU) 2024/1689 (Artificial Intelligence Act). https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+   "identifier": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 14,
+   "entry": "Regulation (EU) 2016/679 (General Data Protection Regulation). https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+   "identifier": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 15,
+   "entry": "C. K. Chow. \"On optimum recognition error and reject tradeoff.\" *IEEE Transactions on Information Theory*, 16(1):41–46, 1970. DOI: 10.1109/TIT.1970.1054406",
+   "identifier": "DOI: 10.1109/TIT.1970.1054406",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 16,
+   "entry": "R. El-Yaniv and Y. Wiener. \"On the Foundations of Noise-free Selective Classification.\" *Journal of Machine Learning Research*, 11(53):1605–1641, 2010. https://www.jmlr.org/papers/v11/el-yaniv10a.html",
+   "identifier": "https://www.jmlr.org/papers/v11/el-yaniv10a.html",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 17,
+   "entry": "Y. Geifman and R. El-Yaniv. \"Selective Classification for Deep Neural Networks.\" *Advances in Neural Information Processing Systems 30 (NIPS 2017)*. https://papers.nips.cc/paper_files/paper/2017/hash/4a8423d5e91fda00bb7e46540e2b0cf1-Abstract.html",
+   "identifier": "https://papers.nips.cc/paper_files/paper/2017/hash/4a8423d5e91fda00bb7e46540e2b0cf1-Abstract.html",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 18,
+   "entry": "Y. Geifman and R. El-Yaniv. \"SelectiveNet: A Deep Neural Network with an Integrated Reject Option.\" *Proc. 36th International Conference on Machine Learning*, PMLR 97:2151–2159, 2019. https://proceedings.mlr.press/v97/geifman19a.html",
+   "identifier": "https://proceedings.mlr.press/v97/geifman19a.html",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 19,
+   "entry": "D. Hendrycks and K. Gimpel. \"A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks.\" *ICLR 2017*. arXiv:1610.02136",
+   "identifier": "arXiv:1610.02136",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 20,
+   "entry": "C. Guo, G. Pleiss, Y. Sun, and K. Q. Weinberger. \"On Calibration of Modern Neural Networks.\" *Proc. 34th International Conference on Machine Learning*, PMLR 70:1321–1330, 2017. https://proceedings.mlr.press/v70/guo17a.html",
+   "identifier": "https://proceedings.mlr.press/v70/guo17a.html",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 21,
+   "entry": "M. Pakdaman Naeini, G. F. Cooper, and M. Hauskrecht. \"Obtaining Well Calibrated Probabilities Using Bayesian Binning.\" *Proc. AAAI Conference on Artificial Intelligence*, 29(1), 2015. DOI: 10.1609/aaai.v29i1.9602",
+   "identifier": "DOI: 10.1609/aaai.v29i1.9602",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 22,
+   "entry": "D. Madras, T. Pitassi, and R. Zemel. \"Predict Responsibly: Improving Fairness and Accuracy by Learning to Defer.\" *Advances in Neural Information Processing Systems 31 (NeurIPS 2018)*. arXiv:1711.06664",
+   "identifier": "arXiv:1711.06664",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 23,
+   "entry": "H. Mozannar and D. Sontag. \"Consistent Estimators for Learning to Defer to an Expert.\" *Proc. 37th International Conference on Machine Learning*, PMLR 119:7076–7087, 2020. https://proceedings.mlr.press/v119/mozannar20b.html",
+   "identifier": "https://proceedings.mlr.press/v119/mozannar20b.html",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 24,
+   "entry": "M. Raghu, K. Blumer, G. Corrado, J. Kleinberg, Z. Obermeyer, and S. Mullainathan. \"The Algorithmic Automation Problem: Prediction, Triage, and Human Effort.\" arXiv:1903.12220, 2019.",
+   "identifier": "arXiv:1903.12220",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 25,
+   "entry": "V. Vovk, A. Gammerman, and G. Shafer. *Algorithmic Learning in a Random World*. Springer, 2005. DOI: 10.1007/b106715",
+   "identifier": "DOI: 10.1007/b106715",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 26,
+   "entry": "A. N. Angelopoulos and S. Bates. \"A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification.\" arXiv:2107.07511, 2021.",
+   "identifier": "arXiv:2107.07511",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 27,
+   "entry": "Y. Romano, M. Sesia, and E. J. Candès. \"Classification with Valid and Adaptive Coverage.\" *Advances in Neural Information Processing Systems 33 (NeurIPS 2020)*, pp. 3581–3591. https://proceedings.neurips.cc/paper/2020/hash/244edd7e85dc81602b7615cd705545f5-Abstract.html",
+   "identifier": "https://proceedings.neurips.cc/paper/2020/hash/244edd7e85dc81602b7615cd705545f5-Abstract.html",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 28,
+   "entry": "B. Kompa, J. Snoek, and A. L. Beam. \"Second opinion needed: communicating uncertainty in medical machine learning.\" *npj Digital Medicine*, 4:4, 2021. DOI: 10.1038/s41746-020-00367-3",
+   "identifier": "DOI: 10.1038/s41746-020-00367-3",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 29,
+   "entry": "R. W. Picard. *Affective Computing*. MIT Press, 1997. ISBN 9780262161701",
+   "identifier": "ISBN 9780262161701",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 30,
+   "entry": "L. Stark and J. Hoey. \"The Ethics of Emotion in Artificial Intelligence Systems.\" *Proc. 2021 ACM Conference on Fairness, Accountability, and Transparency (FAccT '21)*, pp. 782–793. DOI: 10.1145/3442188.3445939",
+   "identifier": "DOI: 10.1145/3442188.3445939",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 31,
+   "entry": "N. Andalibi and J. Buss. \"The Human in Emotion Recognition on Social Media: Attitudes, Outcomes, Risks.\" *Proc. CHI 2020*, pp. 1–16. DOI: 10.1145/3313831.3376680",
+   "identifier": "DOI: 10.1145/3313831.3376680",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 32,
+   "entry": "K. Roemmich, T. Rosenberg, S. Fan, and N. Andalibi. \"Values in Emotion Artificial Intelligence Hiring Services: Technosolutions to Organizational Problems.\" *Proc. ACM Hum.-Comput. Interact.*, 7(CSCW1):1–28, 2023. DOI: 10.1145/3579543",
+   "identifier": "DOI: 10.1145/3579543",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 33,
+   "entry": "J. X. Chen, A. McDonald, Y. Zou, E. Tseng, K. A. Roundy, A. Tamersoy, F. Schaub, T. Ristenpart, and N. Dell. \"Trauma-Informed Computing: Towards Safer Technology Experiences for All.\" *Proc. CHI 2022*, pp. 1–20. DOI: 10.1145/3491102.3517475",
+   "identifier": "DOI: 10.1145/3491102.3517475",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 34,
+   "entry": "H. S. Bracha. \"Freeze, Flight, Fight, Fright, Faint: Adaptationist Perspectives on the Acute Stress Response Spectrum.\" *CNS Spectrums*, 9(9):679–685, 2004. DOI: 10.1017/S1092852900001954",
+   "identifier": "DOI: 10.1017/S1092852900001954",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 35,
+   "entry": "B. P. Marx, J. P. Forsyth, G. G. Gallup, T. Fusé, and J. M. Lexington. \"Tonic Immobility as an Evolved Predator Defense: Implications for Sexual Assault Survivors.\" *Clinical Psychology: Science and Practice*, 15(1):74–90, 2008. DOI: 10.1111/j.1468-2850.2008.00112.x",
+   "identifier": "DOI: 10.1111/j.1468-2850.2008.00112.x",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 36,
+   "entry": "C. Cantor and J. Price. \"Traumatic Entrapment, Appeasement and Complex Post-Traumatic Stress Disorder: Evolutionary Perspectives of Hostage Reactions, Domestic Abuse and the Stockholm Syndrome.\" *Australian & New Zealand Journal of Psychiatry*, 41(5):377–384, 2007. DOI: 10.1080/00048670701261178",
+   "identifier": "DOI: 10.1080/00048670701261178",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 37,
+   "entry": "P. Gilbert. \"Evolution and social anxiety: The role of attraction, social competition, and social hierarchies.\" *Psychiatric Clinics of North America*, 24(4):723–751, 2001. DOI: 10.1016/S0193-953X(05)70260-4",
+   "identifier": "DOI: 10.1016/S0193-953X(05)70260-4",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 38,
+   "entry": "P. Walker. *Complex PTSD: From Surviving to Thriving — A Guide and Map for Recovering from Childhood Trauma*. Azure Coyote Publishing, 2013. ISBN 9781492871842. **Cited as the popular origin of the term \"fawn\"; this is a self-published practitioner trade book and is not peer-reviewed academic literature.** See §2.3.",
+   "identifier": "ISBN 9781492871842.",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 39,
+   "entry": "J. Kaye, E. A. Whitley, D. Lund, M. Morrison, H. Teare, and K. Melham. \"Dynamic consent: a patient interface for twenty-first century research networks.\" *European Journal of Human Genetics*, 23(2):141–146, 2015. DOI: 10.1038/ejhg.2014.71",
+   "identifier": "DOI: 10.1038/ejhg.2014.71",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 40,
+   "entry": "H. Nissenbaum. \"Privacy as Contextual Integrity.\" *Washington Law Review*, 79(1):119–157, 2004. https://digitalcommons.law.uw.edu/wlr/vol79/iss1/10/",
+   "identifier": "https://digitalcommons.law.uw.edu/wlr/vol79/iss1/10/",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 41,
+   "entry": "D. J. Solove. \"Introduction: Privacy Self-Management and the Consent Dilemma.\" *Harvard Law Review*, 126(7):1880–1903, 2013. https://harvardlawreview.org/print/vol-126/introduction-privacy-self-management-and-the-consent-dilemma/",
+   "identifier": "https://harvardlawreview.org/print/vol-126/introduction-privacy-self-management-and-the-consent-dilemma/",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 42,
+   "entry": "M. Nouwens, I. Liccardi, M. Veale, D. Karger, and L. Kagal. \"Dark Patterns after the GDPR: Scraping Consent Pop-ups and Demonstrating their Influence.\" *Proc. CHI 2020*, article 194. DOI: 10.1145/3313831.3376321",
+   "identifier": "DOI: 10.1145/3313831.3376321",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 43,
+   "entry": "D. Freed, J. Palmer, D. Minchala, K. Levy, T. Ristenpart, and N. Dell. \"'A Stalker's Paradise': How Intimate Partner Abusers Exploit Technology.\" *Proc. CHI 2018*, article 667. DOI: 10.1145/3173574.3174241",
+   "identifier": "DOI: 10.1145/3173574.3174241",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 44,
+   "entry": "S. Wachter and B. Mittelstadt. \"A Right to Reasonable Inferences: Re-Thinking Data Protection Law in the Age of Big Data and AI.\" *Columbia Business Law Review*, 2019(2):494–620. DOI: 10.7916/cblr.v2019i2.3424",
+   "identifier": "DOI: 10.7916/cblr.v2019i2.3424",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 45,
+   "entry": "J. A. Hanley and A. Lippman-Hand. \"If Nothing Goes Wrong, Is Everything All Right? Interpreting Zero Numerators.\" *JAMA*, 249(13):1743–1745, 1983. DOI: 10.1001/jama.1983.03330370053031",
+   "identifier": "DOI: 10.1001/jama.1983.03330370053031",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 46,
+   "entry": "B. Efron and R. J. Tibshirani. *An Introduction to the Bootstrap*. Chapman & Hall, 1993. ISBN 9780412042317",
+   "identifier": "ISBN 9780412042317",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 47,
+   "entry": "Law No. 214 of 2020 promulgating the Law Regulating Clinical Medical Research (Egypt), Official Gazette issue 51 bis (و), 23 December 2020; Executive Regulations, Prime Minister's Decree No. 927 of 2022. https://www.edaegypt.gov.eg/media/zz0alwxy/law-214-of-2020_-to-cairo-legal_.pdf",
+   "identifier": "https://www.edaegypt.gov.eg/media/zz0alwxy/law-214-of-2020_-to-cairo-legal_.pdf",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 48,
+   "entry": "Law No. 151 of 2020 promulgating the Personal Data Protection Law (Egypt), Official Gazette issue 28 bis (هـ), 15 July 2020, in force 16 October 2020; Executive Regulations, Minister of Communications and Information Technology Decree No. 816 of 2025, in force 2 November 2025. Regulator: https://pdpc.gov.eg",
+   "identifier": "https://pdpc.gov.eg",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 49,
+   "entry": "M. Matar and H. Silverman. \"Ethical Considerations and Challenges of Egypt's New Clinical Research Law.\" *Journal of Empirical Research on Human Research Ethics*, 2022. DOI: 10.1177/15562646221096188",
+   "identifier": "DOI: 10.1177/15562646221096188",
+   "verified": true
+  },
+  {
+   "paper": "P2",
+   "n": 50,
+   "entry": "Supreme Council of Universities (Egypt). *Guide to Academic Integrity and Scientific Research Ethics in Egypt* (دليل النزاهة الأكاديمية وأخلاقيات البحث العلمي في مصر), 26 January 2026. https://scu.eg/download/guide-to-academic-integrity-and-research-ethics/ *(Guidance; carries no decree number or binding-force clause. Applicability to private universities unspecified.)* ---",
+   "identifier": "https://scu.eg/download/guide-to-academic-integrity-and-research-ethics/",
+   "verified": true
+  }
+ ],
+ "counts": {
+  "P1": 55,
+  "P2": 50,
+  "entries_without_resolvable_identifier": 0
+ },
+ "note": "Every manuscript reference confirmed against a live source in Session 14."
+}

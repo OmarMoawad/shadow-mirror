@@ -25,20 +25,20 @@ def show(title, mirror):
 # 1. Overconfidence on a topic: says 0.9 sure, performs ~0.25.
 k = ShadowMirror()
 k.add_batch([
-    ("knowledge", "self_report", 0.9, "I know recursion cold"),
-    ("knowledge", "task_performance", 0.3, "recursion exercise"),
-    ("knowledge", "self_report", 0.88, "still feel solid"),
-    ("knowledge", "task_performance", 0.25, "second exercise"),
+    ("knowledge", "self_report", 0.9, "recursion", "I know recursion cold"),
+    ("knowledge", "task_performance", 0.3, "recursion", "recursion exercise"),
+    ("knowledge", "self_report", 0.88, "recursion", "still feel solid"),
+    ("knowledge", "task_performance", 0.25, "recursion", "second exercise"),
 ])
 show("1) Knowledge: a confidence/performance gap", k)
 
 # 2. Desire tension: says doesn't want it, keeps doing it.
 d = ShadowMirror()
 d.add_batch([
-    ("desire", "self_report", 0.2, "I don't care about the leaderboard"),
-    ("desire", "behavior", 0.85, "checked ranking 6x today"),
-    ("desire", "self_report", 0.25, "really, I don't"),
-    ("desire", "behavior", 0.8, "checked again"),
+    ("desire", "self_report", 0.2, "leaderboard", "I don't care about the leaderboard"),
+    ("desire", "behavior", 0.85, "leaderboard", "checked ranking 6x today"),
+    ("desire", "self_report", 0.25, "leaderboard", "really, I don't"),
+    ("desire", "behavior", 0.8, "leaderboard", "checked again"),
 ])
 show("2) Desire: stated vs. behavioural tension", d)
 

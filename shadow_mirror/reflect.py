@@ -55,6 +55,17 @@ _DESIRE_PROMPTS = {
         "You endorse this, but you keep moving away from it. What tends to happen in "
         "the moments just before you step back?"
     ),
+    "unresolved_approach": (
+        "Your actions leaned toward something you didn't fully endorse out loud. "
+        "This instrument will not guess why: approach under stated reluctance can "
+        "come from curiosity, from habit, from pressure, or from a threat response, "
+        "and it cannot tell them apart without knowing how activated and how "
+        "avoidant you were. What was going on in your body around those moments?"
+    ),
+    "unmodelled": (
+        "None of the patterns this instrument knows how to look for fit what you "
+        "logged here. What would you say is actually going on, in your own words?"
+    ),
     "ambivalence": (
         "Your signals genuinely pull both ways here -- toward and away, across time. "
         "It may be that you want and don't want this at once, and that doubleness is "

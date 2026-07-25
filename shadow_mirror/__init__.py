@@ -29,8 +29,31 @@ from .consent import (
 )
 from .patterns import Encounter, PatternReading, analyze, reaction_state
 from .study import Study
+from .urg import UnifiedReflectiveGraph, NODE_TYPES, EDGE_TYPES
+from .beliefs import BeliefRevisionEngine, BeliefLedger, logit, expit
+from .inquiry import (CandidateObservation, Inquiry, InquiryPlanner,
+                      expected_information_gain)
+from .ewk import EWKProfile, EWKReading, Tension, TENSION_THRESHOLD
+from .invariants import check_all, summarise
+from .credible import credible_set, set_report, estimate_person_offset, apply_offset
+from .deployment import (DeploymentContext, DeploymentRefusal, self_context,
+                         SELF, CONSENTED_INDIVIDUAL, INSTITUTIONAL, UNDECLARED,
+                         BIOMETRIC_STREAMS)
+from .ledger import ConsentLedger, ConsentEvent
+from .route_a import (DATASETS as ROUTE_A_DATASETS, LoadReport, Trial as RouteATrial,
+                     load_foodeeg_choices, load_biraffe2_procedure,
+                     load_urban_appraisal, preference_contradiction_rate,
+                     abstention_report, download_instructions)
+from .formation import (FormationModel, FormationRefusal, InstrumentSpec,
+                        REGISTRY as INSTRUMENT_REGISTRY, REFUSAL_GROUNDS,
+                        PSYCHOMETRIC_STREAM)
 
 __all__ = [
+    "ROUTE_A_DATASETS", "RouteATrial", "load_foodeeg_choices",
+    "load_biraffe2_procedure", "load_urban_appraisal",
+    "preference_contradiction_rate", "abstention_report", "download_instructions",
+    "FormationModel", "FormationRefusal", "InstrumentSpec",
+    "INSTRUMENT_REGISTRY", "REFUSAL_GROUNDS", "PSYCHOMETRIC_STREAM",
     # self-owned mirror
     "ShadowMirror",
     "Observation",
@@ -51,6 +74,39 @@ __all__ = [
     "PatternReading",
     "analyze",
     "reaction_state",
+    # unified reflective layer (v1.0)
+    "UnifiedReflectiveGraph",
+    "NODE_TYPES",
+    "EDGE_TYPES",
+    "BeliefRevisionEngine",
+    "BeliefLedger",
+    "logit",
+    "expit",
+    "CandidateObservation",
+    "Inquiry",
+    "InquiryPlanner",
+    "expected_information_gain",
+    "EWKProfile",
+    "EWKReading",
+    "Tension",
+    "TENSION_THRESHOLD",
+    "check_all",
+    "summarise",
+    "credible_set",
+    "set_report",
+    "estimate_person_offset",
+    "apply_offset",
+    # deployment context and consent record (v1.1)
+    "DeploymentContext",
+    "DeploymentRefusal",
+    "self_context",
+    "SELF",
+    "CONSENTED_INDIVIDUAL",
+    "INSTITUTIONAL",
+    "UNDECLARED",
+    "BIOMETRIC_STREAMS",
+    "ConsentLedger",
+    "ConsentEvent",
 ]
 
-__version__ = "0.3.0"
+__version__ = "1.3.0"

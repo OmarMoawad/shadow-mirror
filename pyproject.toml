@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "shadow-mirror"
-version = "0.3.0"
+version = "1.3.0"
 description = "A consent-based probabilistic reflection engine (self + consented-subject modes; not a classifier)."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -24,3 +24,7 @@ packages = ["shadow_mirror"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.mutmut]
+source_paths = ["shadow_mirror/"]
+pytest_add_cli_args_test_selection = ["tests/", "-q"]
