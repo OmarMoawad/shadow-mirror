@@ -1,0 +1,8 @@
+# Binary formats: never apply line-ending conversion.
+# Several PDFs here contain no NUL bytes in their first 8KB, so git's
+# heuristic misreads them as text and core.autocrlf=true would corrupt
+# them on checkout.
+*.pdf  binary
+*.docx binary
+*.zip  binary
+*.png  binary
