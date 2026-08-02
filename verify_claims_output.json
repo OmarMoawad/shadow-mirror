@@ -1,0 +1,94 @@
+{
+  "intake": {
+    "ms_by_pairs": {
+      "100": 3.3,
+      "200": 6.17,
+      "400": 13.91,
+      "800": 24.6
+    },
+    "ratio_per_doubling": 1.77
+  },
+  "order_invariance": {
+    "permutations": 120,
+    "distinct_outcomes": 1,
+    "max_spread": 0.0
+  },
+  "invariants": {
+    "count": 12,
+    "names": [
+      "check_all",
+      "check_i_evidence_traceability",
+      "check_ii_provenance_preservation",
+      "check_iii_revision_history",
+      "check_iv_explicit_uncertainty",
+      "check_ix_transactional_consistency",
+      "check_v_hypothesis_independence",
+      "check_vi_context_consistency",
+      "check_vii_explanation_integrity",
+      "check_viii_inquiry_justification",
+      "check_x_human_authority",
+      "check_xi_declared_only"
+    ]
+  },
+  "deployment": {
+    "by_context": {
+      "institutional": "refused",
+      "undeclared": "refused",
+      "self": "allowed"
+    },
+    "empty_basis_refuses": true,
+    "written_basis_permits": true
+  },
+  "ledger": {
+    "entries": 3,
+    "verifies": true,
+    "detects_tampering": true,
+    "receipt_keys": [
+      "chain_verifies",
+      "erased_at",
+      "ledger_entries_retained",
+      "note",
+      "records_erased",
+      "streams_that_had_been_granted",
+      "subject",
+      "withdrawn",
+      "withdrawn_at"
+    ]
+  },
+  "formation": {
+    "refusing_methods": [
+      "maturity_level",
+      "overall_maturity",
+      "developmental_stage",
+      "eventual_purpose",
+      "life_purpose",
+      "what_they_still_need",
+      "deficits",
+      "infer_origin",
+      "infer_background"
+    ],
+    "returned": []
+  },
+  "open_questions_sample": [
+    {
+      "construct": "need",
+      "question": "What would you say you need most at the moment, and from whom?",
+      "why": "Nothing in the model speaks to this yet."
+    },
+    {
+      "construct": "will",
+      "question": "Which of the things you care about would you not give up?",
+      "why": "Nothing in the model speaks to this yet."
+    },
+    {
+      "construct": "purpose",
+      "question": "Is there something you are working toward, or are you looking?",
+      "why": "Nothing in the model speaks to this yet."
+    },
+    {
+      "construct": "maturity_profile",
+      "question": "Where do you think you have changed most in the last few years?",
+      "why": "Nothing in the model speaks to this yet."
+    }
+  ]
+}
